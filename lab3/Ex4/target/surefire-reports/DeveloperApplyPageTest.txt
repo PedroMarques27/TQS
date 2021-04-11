@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: DeveloperApplyPageTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 19.949 s <<< FAILURE! - in DeveloperApplyPageTest
+applyAsDeveloper  Time elapsed: 19.94 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#developer_email"}
+  (Session info: chrome=89.0.4389.114)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-beta-1', revision: '9c03156c2b'
+System info: host: 'DESKTOP-ERPO1PE', ip: '192.168.1.14', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2ed8c3836dc435f81ec529a6e750f10b, findElement {using=id, value=developer_email}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.114, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\pedro\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60013}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2ed8c3836dc435f81ec529a6e750f10b
+	at DeveloperApplyPageTest.applyAsDeveloper(DeveloperApplyPageTest.java:45)
+
