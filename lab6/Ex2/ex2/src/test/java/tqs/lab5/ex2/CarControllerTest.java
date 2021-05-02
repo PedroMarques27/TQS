@@ -75,6 +75,4 @@ class CarControllerTest {
                 .andExpect(jsonPath("$.model ", is("Yaris")));
     }
 
-
-
 }
