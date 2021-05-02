@@ -35,8 +35,6 @@ class CarRepositoryTest {
     void tearDown() {
     }
 
-
-
     @Test
     void findAll() {
         List<Car> available = carRepository.findAll();
