@@ -1,0 +1,6 @@
+projectKey=org.example:Stocks
+serverUrl=http://localhost:9000
+serverVersion=8.8.0.42792
+dashboardUrl=http://localhost:9000/dashboard?id=org.example%3AStocks
+ceTaskId=AXksh4njaMOARkvphL_F
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXksh4njaMOARkvphL_F

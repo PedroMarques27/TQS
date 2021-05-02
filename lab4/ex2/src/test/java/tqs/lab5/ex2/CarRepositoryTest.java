@@ -35,11 +35,7 @@ class CarRepositoryTest {
     void tearDown() {
     }
 
-    @Test
-    void findByCarId() {
-        Car available = carRepository.findByCarId(2L);
-        assertEquals(available,car2);
-    }
+
 
     @Test
     void findAll() {

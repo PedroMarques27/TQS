@@ -1,4 +1,0 @@
-# Created at 2021-03-28T10:53:34.204
-Boot Manifest-JAR contains absolute paths in classpath 'D:\pedro\Documentos\Github\TQS\lab2\MapQuest\target\test-classes'
-Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
-
