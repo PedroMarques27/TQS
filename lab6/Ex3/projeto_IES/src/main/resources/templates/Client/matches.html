@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tinderito</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" th:href="@{/css/match_profile.css}">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" th:onclick="window.location.href='/home'">Tinderito</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" th:onclick="window.location.href='/home'">Home</a>
+            <a class="nav-item nav-link active" th:onclick="window.location.href='/match'">Matches<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" th:onclick="window.location.href='/profile'">Profile</a>
+            <a class="nav-item nav-link" th:onclick="window.location.href='/login'">Logout</a>
+        </div>
+    </div>
+</nav>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+<div class="container">
+    <div class="pic" style="margin-left: auto;
+  margin-right: auto; position:relative;">
+
+        <div class="col-lg-6 " th:each="image: ${images}" th:switch="${#strings.contains(images,'DEFAULT')}" style="width:20%;margin-left: auto;
+        margin-right: auto; position:relative;">
+
+            <p th:case="${true}">
+                <img th:src="@{'/images/'+${image}}" style="width:100%">
+            </p>
+            <p th:case="${false}">
+                <img style="width:100%"
+                     th:src="${image} ? @{'data:image/jpeg;base64,'+${image}} : @{/images/no-profile-pic-icon-24.png}">
+            </p>
+        </div>
+    </div>
+
+    <div class="name-box">
+        <h2 th:text="${matched_client.name}">, <span class="age" th:text="${matched_client.age}"> </span></h2>
+
+
+    </div>
+    <div class="info">
+        <p th:text="${matched_client.bio}"></p>
+        <p th:text="${matched_client.description}"></p>
+        <p class="rcorners" th:text="${matched_client.interests}"></p>
+
+    </div>
+    <div class="footer">
+        <div class="circle" id="circleone" th:onclick="|window.location.href='/swipe_left'|">
+            <svg class="back" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M22,3H7C6.31,3 5.77,3.35 5.41,3.88L0,12L5.41,20.11C5.77,20.64 6.31,21 7,21H22A2,2 0 0,0 24,19V5A2,2 0 0,0 22,3M19,15.59L17.59,17L14,13.41L10.41,17L9,15.59L12.59,12L9,8.41L10.41,7L14,10.59L17.59,7L19,8.41L15.41,12"></path>
+            </svg>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary "
+                    th:onclick="|window.location.href='@{/client_profile(email=${matched_client.email})}'|">Check
+                Profile
+            </button>
+        </div>
+
+        <div class="circle" id="circlethree" th:onclick="|window.location.href='/swipe_right'|">
+            <svg class="heart" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M12,21.35L10.55,20.03C5.4,15.36 2,12.27 2,8.5C2,5.41 4.42,3 7.5,3C9.24,3 10.91,3.81 12,5.08C13.09,3.81 14.76,3 16.5,3C19.58,3 22,5.41 22,8.5C22,12.27 18.6,15.36 13.45,20.03L12,21.35Z"></path>
+            </svg>
+        </div>
+    </div>
+</div>
+</body>
+</html>

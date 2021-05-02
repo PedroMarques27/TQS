@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tinderito</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link th:href="@{/styles/cssandjs/main.css}" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
+
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" th:onclick="window.location.href='/home'">Tinderito</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" th:onclick="window.location.href='/home'">Home</a>
+            <a class="nav-item nav-link active" th:onclick="window.location.href='/info'">Info</a>
+            <a class="nav-item nav-link" th:onclick="window.location.href='/login'">Logout</a>
+
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <h2>Your Business Information</h2>
+            <br>
+            <table>
+                <tr>
+                    <td>
+                        <strong>Name:</strong>
+                    </td>
+                    <td th:text="${user.name}"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Address:</strong>
+                    </td>
+                    <td th:text="${user.address}">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Description:</strong>
+                    </td>
+                    <td th:text="${user.description}">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Business Type:</strong>
+                    </td>
+                    <td th:text="${user.business_type}">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Business State:</strong>
+                    </td>
+                    <td th:text="${user.business_state}">
+                    </td>
+                </tr>
+            </table>
+            <button type="button" class="btn btn-primary text-right" th:onclick="|window.location.href='/edit_business_info'|">Edit</button>
+            <br>
+            <button type="button" class="btn btn-danger text-right"
+                    th:onclick="|window.location.href='@{/delete_user(email=${user.email})}'|">Delete Account
+            </button>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="container">
+    <h2>Subscriptions History</h2>
+    <button type="button" class="btn btn-primary text-right" th:onclick="|window.location.href='/change_subscription?id='+${currentSub.id}">Change Subscription</button>
+    <hr>
+    <table style="width:100%">
+        <tr>
+            <th>Monthly Fee</th>
+            <th>Start Date</th>
+            <th>End date</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td th:text="${currentSub.monthly_fee}"></td>
+            <td th:text="${currentSub.start_date}"></td>
+            <td></td>
+            <td>Current plan</td>
+        </tr>
+        <tr th:each="sub: ${oldSubscriptions}">
+            <td th:text="${sub.monthly_fee}"></td>
+            <td th:text="${sub.start_date}"></td>
+            <td th:text="${sub.end_date}"></td>
+            <td></td>
+        </tr>
+    </table>
+</div>
+
+<script src="business.js"></script>
+</body>
+</html>

@@ -1,0 +1,224 @@
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <link rel="stylesheet" th:href="@{/css/messenger.css}" />
+    
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+      <title>Chat Application</title>
+  </head>
+  <body>
+    <noscript>
+      <h2>Sorry! Your browser doesn't support Javascript</h2>
+    </noscript>
+    <div id="username-page">
+        <div class="username-page-container">
+            <form id="usernameForm" name="usernameForm" >
+                <div class="form-group" >
+                    <input type="text" id="sender" name="sender" disabled th:value="${sender}">
+                    <input type="text" id="receiver" name="receiver" disabled th:value="${receiver}">
+                    <input type="text" style="display:none" id="previous_message" name="previous_message" disabled th:value="${previous_message}">
+                    <button class="accent username-submit" type="submit" id="topic" >Start Chatting...</button>
+                    
+                </div>
+        </form>
+        </div>
+    </div>
+    
+    <div id="chat-page" class="hidden">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2>Chat Application</h2>
+            </div>
+            <div class="connecting">
+                Connecting...
+            </div>
+            <ul id="messageArea">
+
+            </ul>
+            <form id="messageForm" name="messageForm">
+                <div class="form-group">
+                    <div class="input-group clearfix">
+                        <input type="text" id="message" placeholder="Type a message..." autocomplete="off" class="form-control"/>
+                        <button type="submit" class="primary">Send</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script type="text/javascript" th:inline="javascript">
+
+var usernamePage = document.querySelector('#username-page');
+var chatPage = document.querySelector('#chat-page');
+var usernameForm = document.querySelector('#usernameForm');
+var messageForm = document.querySelector('#messageForm');
+var messageInput = document.querySelector('#message');
+var messageArea = document.querySelector('#messageArea');
+var connectingElement = document.querySelector('.connecting');
+var previous_message;
+var stompClient = null;
+var sender = null;
+var receiver = null;
+var pm = null;
+var disposing_old = false;
+var colors = [
+    '#2196F3', '#32c787', '#00BCD4', '#ff5652',
+    '#ffc107', '#ff85af', '#FF9800', '#39bbb0'
+];
+
+
+function connect(event) {
+    receiver = document.querySelector('#receiver').value.trim();
+    sender = document.querySelector('#sender').value.trim();
+    if(sender) {
+        usernamePage.classList.add('hidden');
+        chatPage.classList.remove('hidden');
+
+        var socket = new SockJS('/ws');
+        stompClient = Stomp.over(socket);
+
+        stompClient.connect({}, onConnected, onError);
+    }
+    event.preventDefault();
+}
+
+
+function onConnected() {
+    // Subscribe to the Public Topic
+    
+    stompClient.subscribe('/topic/messages', onMessageReceived);
+    
+    // Tell your username to the server
+    stompClient.send("/app/chat.addUser",
+        {},
+        JSON.stringify({sender: sender,receiver:receiver, type: 'JOIN'})
+    )
+   
+    
+   
+    connectingElement.classList.add('hidden');
+}
+function addOldMessage(message){
+
+    var messageElement = document.createElement('li');
+    messageElement.classList.add('chat-message');
+    var avatarElement = document.createElement('i');
+    var avatarText = document.createTextNode(message.sender[0]);
+    avatarElement.appendChild(avatarText);
+    avatarElement.style['background-color'] = getAvatarColor(message.sender);
+
+    messageElement.appendChild(avatarElement);
+
+    var usernameElement = document.createElement('span');
+    var usernameText = document.createTextNode(message.sender);
+    usernameElement.appendChild(usernameText);
+    messageElement.appendChild(usernameElement);
+    var textElement = document.createElement('p');
+    var messageText = document.createTextNode(message.content);
+    textElement.appendChild(messageText);
+
+    messageElement.appendChild(textElement);
+
+    messageArea.appendChild(messageElement);
+    messageArea.scrollTop = messageArea.scrollHeight;
+}
+
+
+function onError(error) {
+    connectingElement.textContent = 'Could not connect to WebSocket server. Please refresh this page to try again!';
+    connectingElement.style.color = 'red';
+}
+
+
+function sendMessage(event) {
+    var messageContent = messageInput.value.trim();
+    if(messageContent && stompClient) {
+        var chatMessage = {
+            sender: sender,
+            content: messageInput.value,
+            type: 'CHAT',
+            receiver:receiver
+        };
+        stompClient.send("/app/chat.sendMessage", {}, JSON.stringify(chatMessage));
+        messageInput.value = '';
+    }
+    event.preventDefault();
+}
+
+
+
+function onMessageReceived(payload) {
+    var message = JSON.parse(payload.body);
+    var initialized = false;
+    var messageElement = document.createElement('li');
+    if ((message.sender==receiver && message.receiver==sender) ||(message.sender==sender && message.receiver==receiver)){
+        if(message.type === 'JOIN') {
+            messageElement.classList.add('event-message');
+            message.content = message.sender + ' joined!';
+            /*[# th:each="n : ${previous_message}"]*/
+            var m = ("[(${n})]");
+                
+                var chatMessage = {
+                    sender: "[(${n.sender})]",
+                    content: "[(${n.content})]",
+                    type: 'CHAT',
+                    receiver:"[(${n.receiver})]"
+                };
+                if (!disposing_old){
+                    addOldMessage(chatMessage)
+
+                }
+            /*[/]*/
+            disposing_old = true;
+        } else if (message.type === 'LEAVE') {
+            messageElement.classList.add('event-message');
+            message.content = message.sender + ' left!';
+        } else {
+            
+            messageElement.classList.add('chat-message');
+    
+            var avatarElement = document.createElement('i');
+            var avatarText = document.createTextNode(message.sender[0]);
+            avatarElement.appendChild(avatarText);
+            avatarElement.style['background-color'] = getAvatarColor(message.sender);
+    
+            messageElement.appendChild(avatarElement);
+    
+            var usernameElement = document.createElement('span');
+            var usernameText = document.createTextNode(message.sender);
+            usernameElement.appendChild(usernameText);
+            messageElement.appendChild(usernameElement);
+        }
+    
+        var textElement = document.createElement('p');
+        var messageText = document.createTextNode(message.content);
+        textElement.appendChild(messageText);
+    
+        messageElement.appendChild(textElement);
+    
+        messageArea.appendChild(messageElement);
+        messageArea.scrollTop = messageArea.scrollHeight;
+       
+    }
+    
+}
+
+
+function getAvatarColor(messageSender) {
+    var hash = 0;
+    for (var i = 0; i < messageSender.length; i++) {
+        hash = 31 * hash + messageSender.charCodeAt(i);
+    }
+    var index = Math.abs(hash % colors.length);
+    return colors[index];
+}
+
+usernameForm.addEventListener('submit', connect, true)
+messageForm.addEventListener('submit', sendMessage, true)
+    </script>
+  </body>
+</html>

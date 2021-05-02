@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tinderito</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+
+		<link rel="stylesheet" href="@{/css/client_homepage.css}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
+		<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">Tinderito</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+					aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			  	<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			  	<div class="navbar-nav">
+					<a class="nav-item nav-link active" th:onclick="window.location.href='/home'">Home<span class="sr-only">(current)</span></a>
+					<a class="nav-item nav-link" th:onclick="window.location.href='/match'">Matches</a>
+					<a class="nav-item nav-link" th:onclick="window.location.href='/profile'">Profile</a>
+
+					<a class="nav-item nav-link" th:onclick="window.location.href='/login'">Logout</a>
+			  	</div>
+			</div>
+		</nav>
+		
+		<br>
+		<div class="container">
+			<h2 style="width:80%"> Promotions </h2>
+			<hr >
+		
+		<div class="card" th:if="${first_s}!=null" th:switch="${#strings.contains(first_s,'DEFAULT')}" style="width:28%; height:500px;display:inline-block;margin:2%">
+			<img th:case="${true}"  class="card-img-top"  th:src="@{'/images/'+${first_s}}">
+			<img th:case="${false}" class="card-img-top" th:alt="${first_s}"
+				 th:src="${first_s} ? @{'data:image/jpeg;base64,'+${first_s}} : @{/images/no-profile-pic-icon-24.png}">
+	
+			<div class="card-body">
+			  <h4 class="card-title" th:text="${first.title} " ></h4>
+			  <p class="card-text" th:text="${first.description} "></p>
+			  <button th:if="${first}!=null" class="btn btn-primary text-right"
+					  th:onclick="|window.location.href='/promotion_details?id='+${first.id}" >Go Get It!</button>
+			</div>
+		  </div>
+		  <div class="card" th:if="${second_s} !=null" th:switch="${#strings.contains(second_s,'DEFAULT')}" style="width:28%; height:500px;display:inline-block;margin:2%">
+			<img th:case="${true}"  class="card-img-top"  th:src="@{'/images/'+${second_s}}">
+			<img th:case="${false}" class="card-img-top" th:alt="${second_s}"
+				 th:src="${second_s} ? @{'data:image/jpeg;base64,'+${second_s}} : @{/images/no-profile-pic-icon-24.png}">
+	
+			<div class="card-body" th:if="${second}!=null">
+				<h4 class="card-title" th:text="${second.title} " ></h4>
+				<p class="card-text" th:text="${second.description} "></p>
+				<button class="btn btn-primary text-right"
+						th:onclick="|window.location.href='/promotion_details?id='+${second.id}" >Go Get It!</button>
+			</div>
+		  </div>
+		  <div class="card" th:if="${third_s}!=null"  th:switch="${#strings.contains(third_s,'DEFAULT')}" style="width:28%; height:500px;display:inline-block;margin:2%">
+			<img th:case="${true}"  class="card-img-top"  th:src="@{'/images/'+${third_s}}">
+			<img th:case="${false}" class="card-img-top" th:alt="${third_s}" th:src="${third_s} ? @{'data:image/jpeg;base64,'+${third_s}} : @{/images/no-profile-pic-icon-24.png}">
+	
+			<div class="card-body">
+				<h4 class="card-title" th:text="${third.title} " ></h4>
+				<p class="card-text" th:text="${third.description} "></p>
+				<button class="btn btn-primary text-right"
+						th:onclick="|window.location.href='/promotion_details?id='+${third.id}" >Go Get It!</button>
+			</div>
+		  </div>
+		</div>
+		
+<div class="container">
+		<div class="container" style="padding: auto;">
+			<h2> Matches</h2>
+			<hr>
+			<div class="card " th:each="client: ${clients}"  style="width:40%; display:inline-block; margin:4%; position:relative">
+
+				<div class="col-lg-6 " th:switch="${#strings.contains(images_map.get(client.email),'DEFAULT')}" style="margin-left: auto;
+				margin-right: auto; position:relative;" > 
+					<p th:case="${true}">
+						<img th:src="@{'/images/'+${images_map.get(client.email)}}"  style="width:40%;display: block;margin-top:15px;margin-left: auto;margin-right: auto;">
+					</p>
+					<p th:case="${false}">
+						<img th:src="${images_map.get(client.email)} ? @{'data:image/jpeg;base64,'+${images_map.get(client.email)}} : @{/images/no-profile-pic-icon-24.png}"style="width:40%;display: block;margin-top:15px;margin-left: auto;margin-right: auto;">
+					</p> 
+				  </div>
+
+			
+				  
+				<div class="container">
+				  <h4><b th:text="${client.username}"> </b></h4>
+				  <p th:text="${client.age}">	<form th:action = "@{/chat(message_to=${client.email})}" method = "POST">
+
+						<button type="submit" class="btn btn-primary text-right" >Start Messaging</button>
+						</form></p>
+				  <div class="col-lg-auto text-right">
+					
+				</div>
+				</div>
+				
+			  </div> 
+		
+			
+		</div>
+		<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="slick/slick.min.js"></script>
+
+
+
+</body>
+
+</html> 

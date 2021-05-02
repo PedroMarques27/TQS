@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tinderito Admin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="@{/css/client_homepage.css}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" th:onclick="|window.location.href='/home'|">Tinderito Admin</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link active" th:onclick="window.location.href='/home'">Home<span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" th:onclick="window.location.href='/login'">Logout</a>
+        </div>
+    </div>
+</nav>
+
+<br>
+
+<div class="container">
+    <h2>Pending and Reported Users</h2>
+    <hr>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'BusinessPend')">Business - Pending</button>
+        <button class="tablinks" onclick="openCity(event, 'BusinessRep')">Business - Reported</button>
+        <button class="tablinks" onclick="openCity(event, 'BusinessAcc')">Business - Accepted</button>
+        <button class="tablinks" onclick="openCity(event, 'ClientPend')">Client - Pending</button>
+        <button class="tablinks" onclick="openCity(event, 'ClientRep')">Client - Reported</button>
+        <button class="tablinks" onclick="openCity(event, 'ClientAcc')">Client - Accepted</button>
+    </div>
+    <div id="BusinessPend" class="tabcontent">
+
+        <table style="width:100%">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Type</th>
+                <th>State</th>
+                <th></th>
+            </tr>
+            <tr th:each="bus: ${businessesPend}">
+                <td th:text="${bus.name}"></td>
+                <td th:text="${bus.email}"></td>
+                <td th:text="${bus.business_type}"></td>
+                <td th:text="${bus.business_state}"></td>
+                <td>
+                    <button th:onclick="|window.location.href='@{/change_state_business(email=${bus.email})}'|"
+                            type="submit" class="btn btn-primary text-right">Details
+                    </button>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <div id="BusinessRep" class="tabcontent">
+        <table style="width:100%">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Type</th>
+                <th>State</th>
+                <th></th>
+            </tr>
+            <tr th:each="bus: ${businessesRep}">
+                <td th:text="${bus.name}"></td>
+                <td th:text="${bus.email}"></td>
+                <td th:text="${bus.business_type}"></td>
+                <td th:text="${bus.business_state}"></td>
+                <td>
+                    <button type="submit"
+                            th:onclick="|window.location.href='@{/change_state_business(email=${bus.email})}'|"
+                            class="btn btn-primary text-right">Details
+                    </button>
+                </td>
+               </tr>
+        </table>
+    </div>
+    <div id="BusinessAcc" class="tabcontent">
+        <table style="width:100%">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Type</th>
+                <th>State</th>
+                <th></th>
+            </tr>
+            <tr th:each="bus: ${businessesAcc}">
+                <td th:text="${bus.name}"></td>
+                <td th:text="${bus.email}"></td>
+                <td th:text="${bus.business_type}"></td>
+                <td th:text="${bus.business_state}"></td>
+                <td>
+                    <button th:onclick="|window.location.href='@{/change_state_business(email=${bus.email})}'|"
+                            type="submit" class="btn btn-primary text-right">Details
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="ClientPend" class="tabcontent">
+        <table style="width:100%">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>State</th>
+                <th></th>
+            </tr>
+            <tr th:each="cli: ${clientsPend}">
+                <td th:text="${cli.name}"></td>
+                <td th:text="${cli.email}"></td>
+                <td th:text="${cli.age}"></td>
+                <td th:text="${cli.state}"></td>
+                <td>
+                    <button th:onclick="|window.location.href='@{/change_state_client(email=${cli.email})}'|"
+                            type="submit" class="btn btn-primary text-right">Details
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="ClientRep" class="tabcontent">
+        <table style="width:100%">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>State</th>
+                <th></th>
+            </tr>
+            <tr th:each="cli: ${clientsRep}">
+                <td th:text="${cli.name}"></td>
+                <td th:text="${cli.email}"></td>
+                <td th:text="${cli.age}"></td>
+                <td th:text="${cli.state}"></td>
+                <td>
+                    <button th:onclick="|window.location.href='@{/change_state_client(email=${cli.email})}'|"
+                            type="submit" class="btn btn-primary text-right">Details
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="ClientAcc" class="tabcontent">
+        <table style="width:100%">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Age</th>
+                <th>State</th>
+                <th></th>
+            </tr>
+            <tr th:each="cli: ${clientsAcc}">
+                <td th:text="${cli.name}"></td>
+                <td th:text="${cli.email}"></td>
+                <td th:text="${cli.age}"></td>
+                <td th:text="${cli.state}"></td>
+                <td>
+                    <button th:onclick="|window.location.href='@{/change_state_client(email=${cli.email})}'|"
+                            type="submit" class="btn btn-primary text-right">Details
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+</body>
+
+<script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+
+</html>

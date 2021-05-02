@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Tinderito Admin</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+
+    <link th:href="@{/styles/cssandjs/main.css}" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
+
+
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" th:onclick="window.location.href='/home'">Tinderito Admin</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" th:onclick="window.location.href='/home'">Home</a>
+            <a class="nav-item nav-link" th:onclick="window.location.href='/login'">Logout</a>
+        </div>
+    </div>
+</nav>
+<br>
+<div class="container">
+    <h2>Business Information</h2>
+    <hr>
+    <div class="row">
+        <div class="col-lg-8">
+            <p><strong>Name: </strong><span th:text="${business.name}"></span></p>
+            <p><strong>Email: </strong><span th:text="${business.email}"></span></p>
+            <p><strong>Address: </strong><span th:text="${business.address}"></span></p>
+            <p><strong>Description: </strong><span th:text="${business.description}"></span></p>
+            <p><strong>Type: </strong><span th:text="${business.business_type}"></span></p>
+            <p><strong>State: <span th:text="${business.business_state}"></span></strong></p>
+            <br>
+
+            <h3>Change State</h3>
+            <hr>
+            <form th:action="@{/change_state_business(email=${business.email})}" th:object="${businessStateForm}"
+                  method="post"
+                  class="login100-form validate-form">
+                <table>
+                    <tr>
+                        <td>
+                            <strong>Business state now: </strong><span th:text="${business.business_state}"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" id="accepted" name="sub" th:value="'Accepted'"
+                                   th:field="*{business_state}">
+                            <label for="accepted">Accepted</label><br>
+                            <input type="radio" id="pending" name="sub" th:value="'Pending'"
+                                   th:field="*{business_state}">
+                            <label for="pending">Pending</label><br>
+                            <input type="radio" id="reported" name="sub" th:value="'Reported'"
+                                   th:field="*{business_state}">
+                            <label for="reported">Reported</label><br>
+                        </td>
+                    </tr>
+                </table>
+                <div class="container-login100-form-btn">
+                    <input class="btn btn-primary text-right" type="submit" value="Save"/>
+                    <button type="button" class="btn btn-danger text-right"
+                            th:onclick="|window.location.href='/home'|">Cancel Changes
+                    </button>
+                </div>
+            </form>
+
+            <br>
+            <button type="button" class="btn btn-danger text-right"
+                    th:onclick="|window.location.href='@{/delete_user(email=${business.email})}'|">Delete Business
+            </button>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+</body>
+</html>

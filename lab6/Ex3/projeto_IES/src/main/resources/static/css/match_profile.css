@@ -1,0 +1,172 @@
+.container {
+    width: 420px;
+    height: 690px;
+    border: 1px solid black;
+    margin: 40px auto 0 auto;
+    position: relative;
+  }
+  
+  .pic {
+    height: 55%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .kratos {
+    height: 100%;
+    position: absolute;
+    left: -112px;
+  }
+  
+  .name-box {
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+  }
+  
+  h2 {
+    padding-top: -0px;
+    padding-left: 20px;
+    color: #454344;
+    margin: 0;
+    margin-top: 10px;
+  }
+  
+  p {
+    margin: 0;
+    margin-top: 10px;
+    color: grey;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  
+  .age {
+    padding-left: 6px;
+    font-weight: 200;
+  }
+  
+  .arrow-box {
+    position: absolute;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0,0,0,.4);
+    border-radius: 50%;
+    text-align: center;
+    top: 12px;
+    left: 12px;
+  }
+  
+  .arrow {
+    padding-top: 4px;
+    fill: white;
+  }
+  
+  .pic-counter-wrapper {
+    background-color: transparent;
+    position: absolute;
+    z-index: 2;
+    left: 44%;
+    top: 10px;
+  }
+  
+  .dot {
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 0 3px;
+    display: inline-block;
+  /*   position: absolute;
+    z-index: 2; */
+  }
+  
+  #active {
+    background-color: #FE4F68;
+  }
+  
+  .dots-up {
+    position: absolute;
+    transform: rotate(90deg);
+    fill: #FE4F68;
+    right: 10px;
+    top: -4px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .arrow-up {
+    position: absolute;
+  
+    fill: #FE4F68;
+    right: 55px;
+    top: -4px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .footer {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(transparent , white 60%);
+    bottom: 6px;
+    text-align: center;
+  }
+  
+  .circle {
+    width: 70px;
+    height: 70px;
+    background-color: blue;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  #circleone {
+    background-color: #FF4E68;
+    float: left;
+    margin-left: 20px;
+  }
+  
+  #circletwo {
+    background-color: #40A1FE;
+  }
+  
+  #circlethree {
+    background-color: #5BC495;
+    float: right;
+    margin-right: 20px;
+  }
+  
+  .back {
+    fill: white;
+    padding-top: 20px;
+    padding-right: 6px;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .star {
+    fill: white;
+    padding-top: 10px;
+    width: 48px;
+    height: 48px;
+  }
+  
+  #rcorners {
+    border-radius: 15px 50px 30px;
+    padding: 20px; 
+    width: 200px;
+    height: 150px; 
+  }
+  
+  .heart {
+    fill: white;
+    padding-top: 16px;
+    width: 40px;
+    height: 40px;
+  }

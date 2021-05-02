@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Tinderito</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
+		
+	</head>
+
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" th:onclick="window.location.href='/home'">Tinderito</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+			  	<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+			  	<div class="navbar-nav">
+					<a class="nav-item nav-link active" th:onclick="|window.location.href='/home'|">Home<span class="sr-only">(current)</span></a>
+					<a class="nav-item nav-link" th:onclick="|window.location.href='/info'|">Info</a>
+					<a class="nav-item nav-link" th:onclick="window.location.href='/login'">Logout</a>
+			  	</div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<h2>Your Promotions</h2>
+			<button type="submit" class="btn btn-primary text-right" th:onclick="|window.location.href='/new_promotion'|">Create new Promotion</button>
+			<hr>
+		
+			<div class="card" th:each="promotion: ${promotions}" style="width:45%; float:left;margin:15px;">
+<!--				<img th:src="@{/images/no-profile-pic-icon-24.png}" alt="Avatar" style="width:40%;display: block;margin-left: auto;margin-right: auto;">-->
+				<div class="container" >
+					<div class="card" th:switch="${#strings.contains(promotion.value,'DEFAULT')}" >
+						<img th:case="${true}"  class="card-img-top"  th:src="@{'/images/'+${promotion.value}}">
+						<img th:case="${false}" class="card-img-top" th:alt="${promotion.value}" th:src="${promotion.value} ? @{'data:image/jpeg;base64,'+${promotion.value}} : @{/images/no-profile-pic-icon-24.png}">
+					</div>
+					<h4><b th:onclick="|window.location.href='/promotion_details?id='+${promotion.key.id}" th:text="${promotion.key.title}" th:name="id"></b></h4>
+
+					<p th:text="${promotion.key.description}"></p>
+					<p th:text="'Promotion Code: ' +${promotion.key.promotion_code}"></p>
+					<p th:text="${promotion.key.clicks}+ ' Clicks'"></p>
+					<button type="submit" class="btn btn-primary text-right" th:onclick="|window.location.href='/edit_promotion?id='+${promotion.key.id}">Edit</button>
+
+				</div>
+
+			</div>
+		</div>
+	</body>
+
+
+
+</html> 
