@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<style>
+    body {
+        color: #fff;
+        overflow-x: hidden;
+        height: 100%;
+        background-color: #CFD8DC;
+        background-repeat: no-repeat
+    }
+
+    .card {
+        background-image: url("https://i.imgur.com/dpqZJV5.jpg");
+        background-size: cover;
+        width: 600px;
+        height: 350px;
+        border-radius: 20px;
+        box-shadow: 0px 8px 16px 4px #9E9E9E;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        color: #ffffff;
+    }
+
+    .time-font {
+        color: #ffffff;
+        font-size: 50px
+    }
+
+    .sm-font {
+        color: #ffffff;
+        font-size: 18px
+    }
+
+    .med-font {
+        color: #ffffff;
+        font-size: 28px
+    }
+
+    .large-font {
+        color: #ffffff;
+        font-size: 60px
+    }
+</style>
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+<div>
+    <form th:action="${'/'}" th:method="POST">
+        <select name="redSoc">
+            <option th:each="city : *{locations}"
+                    th:value="${city.city}"
+                    th:text="${city.city}">
+            </option>
+        </select>
+        <input type="submit">Register</input>
+    </form>
+
+
+
+
+
+
+</div>
+<div class="container-fluid px-1 px-md-4 py-5 mx-auto" th:if="${selected != false}">
+    <div class="row d-flex justify-content-center px-3">
+        <div class="card">
+            <h2 class="ml-auto mr-4 mt-3 mb-0" th:text="${weather.name}"></h2>
+            <h3 class="ml-auto mr-4 mt-3 mb-0" th:text="${selected}"></h3>
+            <p class="ml-auto mr-4 mb-0 med-font" th:text="${weather.weather[0].main}"></p>
+            <h1 class="ml-auto mr-4 large-font">-20&#176;</h1>
+            <p class="time-font mb-0 ml-4 mt-auto">08:30 <span class="sm-font">AM</span></p>
+            <p class="ml-4 mb-4">Wednesday, 18 October 2019</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

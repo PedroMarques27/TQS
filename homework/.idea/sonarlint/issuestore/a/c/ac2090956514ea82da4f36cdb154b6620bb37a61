@@ -1,0 +1,30 @@
+
+`	java:S112C"FDefine and throw a dedicated exception instead of using a generic one.(‡¤„èÿÿÿÿÿ
+7
+java:S1643J"Use a StringBuilder instead.(§Úç‰øÿÿÿÿ
+k	java:S1176"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§ı²éùÿÿÿÿ
+Q
+java:S1128";Remove this unused import 'java.net.MalformedURLException'.(ªËŞˆ
+T
+java:S1128">Remove this unused import 'org.json.simple.parser.JSONParser'.(õø²¹
+^
+java:S1128"HRemove this unused import 'com.fasterxml.jackson.databind.ObjectMapper'.(´‘¨™
+I
+java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ
+R
+java:S1128"7Remove this unused import 'org.json.simple.JSONObject'.(‚ƒç‘ÿÿÿÿÿ
+”
+java:S11305"~Remove the declaration of thrown exception 'org.json.simple.parser.ParseException', as it cannot be thrown from method's body.(“Ïƒâ
+J
+java:S62126"/Declare this local variable with "var" instead.(§ı²éùÿÿÿÿ
+S	java:S1068"9Replace this use of System.out or System.err by a logger.(¶ƒëÚúÿÿÿÿ
+E
+java:S62129"/Declare this local variable with "var" instead.(¼ë€…
+J
+java:S6212E"/Declare this local variable with "var" instead.(ÁšÕàüÿÿÿÿ
+E
+java:S6212F"/Declare this local variable with "var" instead.(ôøş—
+E
+java:S6212P"/Declare this local variable with "var" instead.(şëŒ
+N	java:S106Z"9Replace this use of System.out or System.err by a logger.(•Ş¡©
+S	java:S106["9Replace this use of System.out or System.err by a logger.(ŒÖıªıÿÿÿÿ

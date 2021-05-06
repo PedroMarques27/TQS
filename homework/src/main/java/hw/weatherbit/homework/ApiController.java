@@ -1,5 +1,7 @@
 package hw.weatherbit.homework;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
 import org.json.simple.parser.ParseException;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -15,28 +17,43 @@ import java.util.Scanner;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 
-@RestController
+@Controller
 @RequestMapping("/")
 public class ApiController {
-    public static final String API_KEY = "d5657cdd44274ec7967c25deef3a9f2f";
-    ArrayList<Location> locations = new ArrayList<>();
+    public static final String API_KEY = "87d54ca4f1f15bfd6e6592f1d7456571";
+    ArrayList<Location> locations = Location.getLocations();
 
-    @Async
-    @Scheduled(fixedRate = 10000)
-    public void callAPI(String city) throws IOException, ParseException {
-        Location currentLocation = new Location();
-        for (Location locs: locations) {
-            if (locs.getCity().equalsIgnoreCase(city)) {
-                currentLocation = locs;
-                break;
+    @GetMapping("/")
+    public String getWelcome(Model model) {
+        model.addAttribute("locations", locations);
+        model.addAttribute("selected", false);
+        return "weather.html";
+    }
+    @PostMapping("/")
+    public String postWelcome(@RequestParam(name = "redSoc", required = true) String redSoc, Model model) throws IOException, ParseException {
+        for (Location c : locations){
+            if (c.getCity().equalsIgnoreCase(redSoc)){
+                model.addAttribute("locations", locations);
+                model.addAttribute("selected", redSoc);
+                WeatherData data = callAPI(c);
+                model.addAttribute("weather", data);
+                return "weather.html";
             }
         }
-        String url_str = String.format("https://api.weatherbit.io/v2.0/current/airquality?lat=%f&lon=%f&key=%s",
-                currentLocation.getLatitude(), currentLocation.getLongitude(), API_KEY);
+        return "";
+
+    }
+    @Async
+    @Scheduled(fixedRate = 10000)
+    public WeatherData callAPI(Location city) throws IOException, ParseException {
+        String url_str = String.format("http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&appid=%s",
+                city.getLatitude(), city.getLongitude(), API_KEY);
+        System.out.println(url_str);
         URL url = new URL(url_str);
 
         //Make GET Request
@@ -58,13 +75,21 @@ public class ApiController {
             }
             scanner.close();
 
-            //Parse the string into a json object
-            JSONParser parse = new JSONParser();
-            JSONObject data_obj = (JSONObject) parse.parse(inline);
 
-            //Get the required object from the above created object
-            JSONObject obj = (JSONObject) data_obj;
-            System.out.println(obj);
+            // Creating a Gson Object
+            Gson gson = new Gson();
+
+            // Converting json to object
+            // first parameter should be prpreocessed json
+            // and second should be mapping class
+            WeatherData wd
+                    = gson.fromJson(inline,
+                    WeatherData.class);
+
+
+            System.out.println(inline);
+            System.out.println(wd.dt);
+            return wd;
         }
     }
 

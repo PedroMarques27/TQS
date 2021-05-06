@@ -5,348 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae8180bc-7f0a-4084-acdd-f1f348b7b508" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../lab1/P1Stack/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab1/P2Euromillions/.idea/P2Euromillions.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab2/Stock/target/Stocks-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab2/Stock/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab2/Stock/target/sonar/.sonar_lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab2/Stock/target/sonar/report-task.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab5/Ex3/target/Ex3-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab5/Ex3/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex1/CodeSmells.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex1/Sonar.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex2/ex2/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex2/ex2/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex2/ex2/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex2/ex2/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex2/ex2/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex2/ex2/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex2/ex2/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex2/ex2/src/main/java/tqs/lab5/ex2/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex2/ex2/src/main/java/tqs/lab5/ex2/CarController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex2/ex2/src/main/java/tqs/lab5/ex2/CarManagerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex2/ex2/src/main/java/tqs/lab5/ex2/CarRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex2/ex2/src/main/java/tqs/lab5/ex2/Ex2Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex2/ex2/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex2/ex2/src/test/java/tqs/lab5/ex2/CarControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex2/ex2/src/test/java/tqs/lab5/ex2/CarManagerServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex2/ex2/src/test/java/tqs/lab5/ex2/CarRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex2/ex2/src/test/java/tqs/lab5/ex2/Ex2ApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/SonarQube Quality Gate Under 200 Code Smells.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/SonarQube Quality Gate Under 300 Code Smells.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/db-docker/business.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/db-docker/clients.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/db-docker/data-modification-scripts/python.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/db-docker/data-modification-scripts/python_script2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/db-docker/data-modification-scripts/python_script3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/db-docker/data-modification-scripts/python_script4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/db-docker/data-modification-scripts/python_script5.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/db-docker/data-modification-scripts/python_script6.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/db-docker/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/db-docker/matches.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/db-docker/promotions.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/db-docker/subscriptions.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/db-docker/users.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Controllers/DatabaseFileService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Controllers/FileNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Controllers/FileStorageException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Controllers/FileUploadController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Controllers/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Controllers/WebController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Entities/Business.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Entities/ChatMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Entities/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Entities/Images.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Entities/Match.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Entities/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Entities/Promotion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Entities/Subscription.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Entities/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Forms/BusinessForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Forms/BusinessStateForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Forms/ClientStateForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Forms/ImageForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Forms/LoginForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Forms/MessageReceiverForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Forms/ProfileForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Forms/PromotionForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Forms/RegisterBusinessForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Forms/RegisterClientForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Forms/SubscriptionForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/HttpHandshakeInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/ProjetoApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Repositories/BusinessRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Repositories/ClientRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Repositories/ImageRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Repositories/MatchesRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Repositories/MessageRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Repositories/PromotionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Repositories/SubscriptionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/Repositories/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/WebSocketConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/WebSocketEventListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/java/ies/projeto/WebSocketMessageBrokerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/client_homepage.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/less/animated.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/less/bordered-pulled.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/less/core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/less/fixed-width.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/less/font-awesome.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/less/icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/less/larger.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/less/list.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/less/mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/less/path.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/less/rotated-flipped.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/less/screen-reader.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/less/stacked.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/less/variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/scss/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/scss/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/scss/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/font-awesome-4.7.0/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/montserrat/Montserrat-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/montserrat/Montserrat-BlackItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/montserrat/Montserrat-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/montserrat/Montserrat-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/montserrat/Montserrat-ExtraBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/montserrat/Montserrat-ExtraBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/montserrat/Montserrat-ExtraLight.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/montserrat/Montserrat-ExtraLightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/montserrat/Montserrat-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/montserrat/Montserrat-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/montserrat/Montserrat-LightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/montserrat/Montserrat-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/montserrat/Montserrat-MediumItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/montserrat/Montserrat-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/montserrat/Montserrat-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/montserrat/Montserrat-SemiBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/montserrat/Montserrat-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/montserrat/Montserrat-ThinItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/montserrat/OFL.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/nucleo-license.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/nucleo-outline.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/nucleo-outline.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/nucleo-outline.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/nucleo-outline.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/poppins/Poppins-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/poppins/Poppins-BlackItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/poppins/Poppins-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/poppins/Poppins-BoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/poppins/Poppins-ExtraBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/poppins/Poppins-ExtraBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/poppins/Poppins-ExtraLight.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/poppins/Poppins-ExtraLightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/poppins/Poppins-Italic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/poppins/Poppins-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/poppins/Poppins-LightItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/poppins/Poppins-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/poppins/Poppins-MediumItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/poppins/Poppins-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/poppins/Poppins-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/poppins/Poppins-SemiBoldItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/poppins/Poppins-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/fonts/poppins/Poppins-ThinItalic.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/login_main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/login_util.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/match_profile.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/messenger.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/now-ui-dashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/now-ui-dashboard.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/now-ui-dashboard.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/images/BizPromoHeader-1288x724.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/images/DEFAULT_F.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/images/DEFAULT_F.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/images/DEFAULT_F2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/images/DEFAULT_F2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/images/DEFAULT_M.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/images/DEFAULT_O.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/images/DEFAULT_R.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/images/DEFAULT_R2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/images/Hispanic_Business_Woman_Smiling_-_175_dpi_-_350_x233_-_Client_Account_Login.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/images/icons/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/images/no-profile-pic-icon-24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/js/core/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/js/core/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/js/core/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/js/demo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/js/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/js/now-ui-dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/js/now-ui-dashboard.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/js/now-ui-dashboard.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/js/plugins/chartjs.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/js/plugins/perfect-scrollbar.jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/animate/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/bootstrap/js/popper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/bootstrap/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/bootstrap/js/tooltip.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/css-hamburgers/hamburgers.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/css-hamburgers/hamburgers.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/jquery/jquery-3.2.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/select2/select2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/select2/select2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/select2/select2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/select2/select2.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/static/vendor/tilt/tilt.jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/templates/Admin/change_state_business.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/templates/Admin/change_state_client.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/templates/Admin/dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/templates/Business/change_subscription.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/templates/Business/edit_business_info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/templates/Business/edit_promotion.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/templates/Business/homepage_business.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/templates/Business/info.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/templates/Business/new_promotion.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/templates/Business/promotion.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/templates/Client/Plantation-Florist Banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/templates/Client/chat.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/templates/Client/edit_profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/templates/Client/homepage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/templates/Client/hotels.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/templates/Client/matches.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/templates/Client/other_client_profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/templates/Client/profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/templates/Client/restaurant.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/templates/Client/user.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/templates/LoginRegister/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/templates/LoginRegister/register_business.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/main/resources/templates/LoginRegister/register_client.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/Ex3/projeto_IES/src/test/java/ies/projeto/ProjetoApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../lab6/readme.txt.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/P1Stack/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/P1Stack/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/P1Stack/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/P1Stack/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/P2Euromillions/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/P2Euromillions/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/P2Euromillions/target/classes/euromillions/CuponEuromillions.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/P2Euromillions/target/classes/euromillions/CuponEuromillions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/P2Euromillions/target/classes/euromillions/Dip.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/P2Euromillions/target/classes/euromillions/Dip.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/P2Euromillions/target/classes/euromillions/EuromillionsDraw.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/P2Euromillions/target/classes/euromillions/EuromillionsDraw.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/P2Euromillions/target/classes/sets/SetOfNaturals.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/P2Euromillions/target/classes/sets/SetOfNaturals.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/P2Euromillions/target/classes/ui/DemoMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/P2Euromillions/target/classes/ui/DemoMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/P2Euromillions/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/P2Euromillions/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/P2Euromillions/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/P2Euromillions/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/P2Euromillions/target/test-classes/euromillions/DipTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/P2Euromillions/target/test-classes/euromillions/DipTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/P2Euromillions/target/test-classes/euromillions/EuromillionsDrawTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/P2Euromillions/target/test-classes/euromillions/EuromillionsDrawTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab1/P2Euromillions/target/test-classes/sets/SetOfNaturalsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab1/P2Euromillions/target/test-classes/sets/SetOfNaturalsTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/MapQuest/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/classes/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/MapQuest/target/classes/Address.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/classes/AddressResolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/MapQuest/target/classes/AddressResolver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/classes/TqsHttpBasic.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/MapQuest/target/classes/TqsHttpBasic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/classes/TqsHttpClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/MapQuest/target/classes/TqsHttpClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/maven-status/maven-compiler-plugin/testCompile/default-cli/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/maven-status/maven-compiler-plugin/testCompile/default-cli/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/MapQuest/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T10-45-24_606.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T10-45-50_897.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T10-46-06_776.dumpstream" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-05-02T11-13-08_770.dumpstream" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T10-47-48_789.dumpstream" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-05-02T11-13-22_449.dumpstream" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T10-48-13_821.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T10-48-36_647.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T10-52-03_380.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T10-52-42_386.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T10-53-01_437.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T10-53-33_772.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T10-56-05_360.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T10-57-28_371.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T10-58-32_767.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T10-59-17_862.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-00-25_018.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-01-38_577.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-03-17_778.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-03-58_129.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-04-39_390.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-04-44_887.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-06-48_055.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-07-22_875.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-07-46_342.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-08-15_764.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-08-43_978.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-10-48_719.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-13-03_305.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-13-49_979.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-16-22_626.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-17-19_486.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-18-43_554.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-21-21_381.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-22-44_788.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-24-15_472.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-24-22_875.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-25-41_565.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-26-29_546.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-26-52_341.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-28-05_098.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-34-39_824.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-35-52_076.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-37-15_420.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-37-44_423.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-39-13_553.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-40-00_670.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-41-13_576.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-42-03_478.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-42-37_787.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/2021-03-28T11-43-55_423.dumpstream" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/AddressResolverTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/AddressResolverTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/TEST-AddressResolverTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/MapQuest/target/surefire-reports/TEST-AddressResolverTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/test-classes/AddressResolverIT$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/MapQuest/target/test-classes/AddressResolverIT$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/test-classes/AddressResolverIT.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/MapQuest/target/test-classes/AddressResolverIT.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/test-classes/AddressResolverTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/MapQuest/target/test-classes/AddressResolverTest$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/MapQuest/target/test-classes/AddressResolverTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/MapQuest/target/test-classes/AddressResolverTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/Stock/target/classes/IStockMarket.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/Stock/target/classes/IStockMarket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/Stock/target/classes/Stock.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/Stock/target/classes/Stock.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/Stock/target/classes/StocksPortfolio.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/Stock/target/classes/StocksPortfolio.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/Stock/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/Stock/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/Stock/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/Stock/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/Stock/target/surefire-reports/StocksPortfolioTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/Stock/target/surefire-reports/StocksPortfolioTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/Stock/target/surefire-reports/TEST-StocksPortfolioTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/Stock/target/surefire-reports/TEST-StocksPortfolioTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/Stock/target/test-classes/StocksPortfolioTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/Stock/target/test-classes/StocksPortfolioTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab4/ex2/src/test/java/tqs/lab5/ex2/CarRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4/ex2/src/test/java/tqs/lab5/ex2/CarRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab5/Ex3/target/surefire-reports/Book Trip.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../lab5/Ex3/target/surefire-reports/Book Trip.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab5/Ex3/target/surefire-reports/TEST-Book Trip.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab5/Ex3/target/surefire-reports/TEST-Book Trip.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab5/Ex3/target/test-classes/CucumberTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab5/Ex3/target/test-classes/CucumberTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab5/Ex3/target/test-classes/MyStepdefs$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab5/Ex3/target/test-classes/MyStepdefs$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab5/Ex3/target/test-classes/MyStepdefs.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab5/Ex3/target/test-classes/MyStepdefs.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/WeatherData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/weather.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/homework.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/Location.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -356,6 +22,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -370,22 +37,37 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.HomeworkApplication (1)">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomeworkApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="homework" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="hw.weatherbit.homework.HomeworkApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -408,6 +90,7 @@
       <updated>1620133826651</updated>
       <workItem from="1620133827903" duration="8000" />
       <workItem from="1620133965508" duration="2564000" />
+      <workItem from="1620296064184" duration="6662000" />
     </task>
     <servers />
   </component>
@@ -424,5 +107,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
