@@ -34,8 +34,9 @@ public class ApiController {
         model.addAttribute("selected", false);
         return "weather.html";
     }
+
     @PostMapping("/")
-    public String postWelcome(@RequestParam(name = "redSoc", required = true) String redSoc, Model model) throws IOException, ParseException {
+    public String postWelcome(@RequestParam(name = "redSoc") String redSoc, Model model) throws IOException, ParseException {
         for (Location c : locations){
             if (c.getCity().equalsIgnoreCase(redSoc)){
                 model.addAttribute("locations", locations);
@@ -46,8 +47,8 @@ public class ApiController {
             }
         }
         return "";
-
     }
+
     @Async
     @Scheduled(fixedRate = 10000)
     public WeatherData callAPI(Location city) throws IOException, ParseException {
@@ -82,9 +83,7 @@ public class ApiController {
             // Converting json to object
             // first parameter should be prpreocessed json
             // and second should be mapping class
-            WeatherData wd
-                    = gson.fromJson(inline,
-                    WeatherData.class);
+            WeatherData wd = gson.fromJson(inline,WeatherData.class);
 
 
             System.out.println(inline);
