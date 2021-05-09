@@ -4,4 +4,6 @@ import java.util.ArrayList;
 
 public interface IBookService {
     ArrayList<Book> findAll();
+
+    void save(Book b);
 }

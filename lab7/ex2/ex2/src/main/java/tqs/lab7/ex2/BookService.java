@@ -13,7 +13,12 @@ public class BookService implements IBookService {
 
     @Override
     public ArrayList<Book> findAll() {
-        var cities = (ArrayList<Book>) repository.findAll();
-        return cities;
+        var books = (ArrayList<Book>) repository.findAll();
+        return books;
+    }
+
+    @Override
+    public void save(Book b) {
+        repository.save(b);
     }
 }
