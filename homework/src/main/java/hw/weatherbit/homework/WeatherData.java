@@ -21,6 +21,10 @@ public class WeatherData{
     public class Coord{
         public double lon;
         public double lat;
+        @Override
+        public String toString() {
+            return String.format("(%f ,%f) ",lat, lon );
+        }
     }
 
     public class Weather{
@@ -28,15 +32,33 @@ public class WeatherData{
         public String main;
         public String description;
         public String icon;
+
+        @Override
+        public String toString() {
+            return "Weather: " + main;
+        }
     }
 
     public class Main{
-        public double temp;
-        public double feels_like;
-        public double temp_min;
-        public double temp_max;
-        public int pressure;
-        public int humidity;
+        public double temp = 0.0;
+        public double feels_like = 0.0;
+        public double temp_min = 0.0;
+        public double temp_max = 0.0;
+        public int pressure = 0;
+        public int humidity = 0;
+
+
+        public String temperatureData() {
+            return String.format("Max: %.1f K,Min: %.1fK, Feels: %.1fK", temp_max,
+                    temp_min, feels_like);
+        }
+        public String moreData() {
+            return String.format("Pressure %d hPa, Humidity: %d%s", pressure, humidity,'%' );
+        }
+
+        public String temperature() {
+            return String.format("%.1fºC",temp);
+        }
     }
 
     public class Wind{

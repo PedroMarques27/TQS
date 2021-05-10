@@ -27,11 +27,14 @@ import org.springframework.web.bind.annotation.*;
 public class ApiController {
     public static final String API_KEY = "87d54ca4f1f15bfd6e6592f1d7456571";
     ArrayList<Location> locations = Location.getLocations();
+    HashMap<Location, ApiRequest> cache = new HashMap<>();
+    private int apiCalled = 0;
 
     @GetMapping("/")
     public String getWelcome(Model model) {
         model.addAttribute("locations", locations);
         model.addAttribute("selected", false);
+        model.addAttribute("apicalls", apiCalled);
         return "weather.html";
     }
 
@@ -41,8 +44,19 @@ public class ApiController {
             if (c.getCity().equalsIgnoreCase(redSoc)){
                 model.addAttribute("locations", locations);
                 model.addAttribute("selected", redSoc);
-                WeatherData data = callAPI(c);
+
+                WeatherData data = new WeatherData();
+                if (cache.containsKey(c) && cache.get(c).isValid() ){
+
+                        data = cache.get(c).getData();
+
+                }else{
+                    data = callAPI(c);
+                    cache.put(c,new ApiRequest(data));
+                }
+
                 model.addAttribute("weather", data);
+                model.addAttribute("apicalls", apiCalled);
                 return "weather.html";
             }
         }
@@ -50,8 +64,8 @@ public class ApiController {
     }
 
     @Async
-    @Scheduled(fixedRate = 10000)
     public WeatherData callAPI(Location city) throws IOException, ParseException {
+        apiCalled++;
         String url_str = String.format("http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&appid=%s",
                 city.getLatitude(), city.getLongitude(), API_KEY);
         System.out.println(url_str);

@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae8180bc-7f0a-4084-acdd-f1f348b7b508" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/9/89cf25075c1ef8841ed15857e527ad3458cd1adb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/ac2090956514ea82da4f36cdb154b6620bb37a61" beforeDir="false" />
@@ -13,6 +14,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/WeatherData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/WeatherData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/weather.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/weather.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/ApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/ApiController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,10 +52,26 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\pedro\Documentos\Github\TQS\homework\src\main\resources\templates" />
+    </key>
+  </component>
   <component name="RunManager" selected="Spring Boot.HomeworkApplication (1)">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HomeworkApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="homework" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="hw.weatherbit.homework.HomeworkApplication" />
@@ -80,6 +100,7 @@
       <workItem from="1620296064184" duration="6662000" />
       <workItem from="1620392153379" duration="562000" />
       <workItem from="1620568225806" duration="361000" />
+      <workItem from="1620658860484" duration="3551000" />
     </task>
     <servers />
   </component>
