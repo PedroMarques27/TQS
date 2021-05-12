@@ -5,39 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae8180bc-7f0a-4084-acdd-f1f348b7b508" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_byteowls_jopencage_1_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_15.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/ApiRequestTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/ApiResTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/HomeworkApplicationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/LocationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/a/6a8e5d44fc37720dc16d897bc4e94d6d20f31cd3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/9/89cf25075c1ef8841ed15857e527ad3458cd1adb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/ac2090956514ea82da4f36cdb154b6620bb37a61" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/3/b332397f367ad3bb1ba9b15976dc23215b6638c4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c37dc5878dcafba48839861a675d61c2c4a013f7" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c3f9941da4028f5b79d68ad0a84ede94c2289d3b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f38a6cba038f3739e3fdd90c70a66a3bb3ad12e5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/f/ff4bf06cc68ba935ef4f9e5ff9ee4a1e5ad3509d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/homework.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiRes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/LatLng.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/LatLng.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/HomeworkApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/LatLng.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/ApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/ApiController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/ApiRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/ApiRequest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/ApiRes.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/ApiRes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/LatLng.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/LatLng.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/Location.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/Location.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +119,7 @@
       <workItem from="1620568225806" duration="361000" />
       <workItem from="1620658860484" duration="3551000" />
       <workItem from="1620811752615" duration="4562000" />
-      <workItem from="1620824196140" duration="3231000" />
+      <workItem from="1620824196140" duration="3900000" />
     </task>
     <servers />
   </component>

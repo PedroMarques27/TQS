@@ -1,0 +1,44 @@
+
+`	java:S112V"FDefine and throw a dedicated exception instead of using a generic one.(‡¤„èÿÿÿÿÿ
+7
+java:S1643]"Use a StringBuilder instead.(§Úç‰øÿÿÿÿ
+k	java:S117I"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§ı²éùÿÿÿÿ
+n
+java:S1128"QRemove this unused import 'com.byteowls.jopencage.model.JOpenCageForwardRequest'.(ŒÒ¶ç8¾—Ğ…–/
+Q
+java:S1128";Remove this unused import 'java.net.MalformedURLException'.(ªËŞˆ
+T
+java:S1128">Remove this unused import 'org.json.simple.parser.JSONParser'.(õø²¹
+h
+java:S1128"KRemove this unused import 'com.byteowls.jopencage.model.JOpenCageResponse'.(ƒµ×Å8¾—Ğ…–/
+^
+java:S1128"HRemove this unused import 'com.fasterxml.jackson.databind.ObjectMapper'.(´‘¨™
+k
+java:S1128"PRemove this unused import 'org.springframework.scheduling.annotation.Scheduled'.(‚¡®Üûÿÿÿÿ
+b
+java:S1128"ERemove this unused import 'com.byteowls.jopencage.JOpenCageGeocoder'.(Éâ¨8¿—Ğ…–/
+R
+java:S1128"7Remove this unused import 'org.json.simple.JSONObject'.(‚ƒç‘ÿÿÿÿÿ
+f
+java:S1128"IRemove this unused import 'com.byteowls.jopencage.model.JOpenCageLatLng'.(¿åñô8¿—Ğ…–/
+M
+java:S18544"8Remove this useless assignment to local variable "data".(Ÿ–¢1
+D
+java:S62124"/Declare this local variable with "var" instead.(Ÿ–¢1
+™
+java:S1130G"~Remove the declaration of thrown exception 'org.json.simple.parser.ParseException', as it cannot be thrown from method's body.(ø¼ ßùÿÿÿÿ
+J
+java:S6212I"/Declare this local variable with "var" instead.(§ı²éùÿÿÿÿ
+S	java:S106K"9Replace this use of System.out or System.err by a logger.(¶ƒëÚúÿÿÿÿ
+E
+java:S6212L"/Declare this local variable with "var" instead.(¼ë€…
+J
+java:S6212X"/Declare this local variable with "var" instead.(ÁšÕàüÿÿÿÿ
+E
+java:S6212Y"/Declare this local variable with "var" instead.(ôøş—
+E
+java:S6212c"/Declare this local variable with "var" instead.(şëŒ
+N	java:S106k"9Replace this use of System.out or System.err by a logger.(•Ş¡©
+S	java:S106l"9Replace this use of System.out or System.err by a logger.(ŒÖıªıÿÿÿÿ
+Q
+java:S1068$"/Remove this unused "GEO_API_KEY" private field.(İÏÄËûÿÿÿÿ8Í—Ğ…–/
