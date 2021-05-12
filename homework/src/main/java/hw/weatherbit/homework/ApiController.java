@@ -1,5 +1,9 @@
 package hw.weatherbit.homework;
 
+import com.byteowls.jopencage.JOpenCageGeocoder;
+import com.byteowls.jopencage.model.JOpenCageForwardRequest;
+import com.byteowls.jopencage.model.JOpenCageLatLng;
+import com.byteowls.jopencage.model.JOpenCageResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import org.json.simple.parser.ParseException;
@@ -29,7 +33,7 @@ public class ApiController {
     ArrayList<Location> locations = Location.getLocations();
     HashMap<Location, ApiRequest> cache = new HashMap<>();
     private int apiCalled = 0;
-
+    private static final String GEO_API_KEY = "04d52af6c36e4f2bbf04224f96cfcbcc";
     @GetMapping("/")
     public String getWelcome(Model model) {
         model.addAttribute("locations", locations);
@@ -51,7 +55,7 @@ public class ApiController {
                         data = cache.get(c).getData();
 
                 }else{
-                    data = callAPI(c);
+                    data = callWeatherAPI(c);
                     cache.put(c,new ApiRequest(data));
                 }
 
@@ -64,7 +68,7 @@ public class ApiController {
     }
 
     @Async
-    public WeatherData callAPI(Location city) throws IOException, ParseException {
+    public WeatherData callWeatherAPI(Location city) throws IOException, ParseException {
         apiCalled++;
         String url_str = String.format("http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&appid=%s",
                 city.getLatitude(), city.getLongitude(), API_KEY);

@@ -13,9 +13,7 @@ public class WeatherData{
     public int dt;
     public Sys sys;
     public int timezone;
-    public int id;
     public String name;
-    public int cod;
 
 
     public class Coord{
@@ -28,10 +26,7 @@ public class WeatherData{
     }
 
     public class Weather{
-        public int id;
         public String main;
-        public String description;
-        public String icon;
 
         @Override
         public String toString() {
@@ -63,7 +58,6 @@ public class WeatherData{
 
     public class Wind{
         public double speed;
-        public int deg;
     }
 
     public class Clouds{
@@ -72,7 +66,6 @@ public class WeatherData{
 
     public class Sys{
         public int type;
-        public int id;
         public double message;
         public String country;
         public int sunrise;

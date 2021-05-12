@@ -1,5 +1,9 @@
 package hw.weatherbit.homework;
 
+import com.byteowls.jopencage.JOpenCageGeocoder;
+import com.byteowls.jopencage.model.JOpenCageForwardRequest;
+import com.byteowls.jopencage.model.JOpenCageLatLng;
+import com.byteowls.jopencage.model.JOpenCageResponse;
 import com.google.gson.Gson;
 import org.json.simple.parser.ParseException;
 import org.springframework.scheduling.annotation.Async;
@@ -16,16 +20,19 @@ import java.util.Scanner;
 
 @RestController
 @RequestMapping("/")
-public class ApiRes {
+public class ApiRest {
     public static final String API_KEY = "87d54ca4f1f15bfd6e6592f1d7456571";
+    private static final String GEO_API_KEY = "04d52af6c36e4f2bbf04224f96cfcbcc";
+
     HashMap<Integer, ApiRequest> cache = new HashMap<>();
-    private int apiCalled = 0;
+    private int weatherApiCalled = 0;
+    private int geoApiCalled = 0;
     private int apiHits = 0;
     private int apiMisses = 0;
     private int usedCache = 0;
 
-    @GetMapping("/api/v1/weather")
-    public String postWather(@RequestParam Double lat,@RequestParam Double lng) throws IOException, ParseException {
+    @GetMapping("/api/v1/weather/location")
+    public String postWeatherByLocation(@RequestParam Double lat,@RequestParam Double lng) throws IOException, ParseException {
 
             LatLng c = new LatLng(lat, lng);
 
@@ -44,21 +51,52 @@ public class ApiRes {
 
     }
 
+    @GetMapping("/api/v1/weather/address")
+    public String postWather(@RequestParam String q) throws IOException, ParseException {
+        LatLng current = callGeolocationAPI(q);
+        return postWeatherByLocation(current.getLatitude(), current.getLongitude());
+
+    }
+
     @GetMapping("/api/v1/statistics")
     public String getStatistics() throws IOException, ParseException {
         HashMap<String, Integer> map = new HashMap<>();
-        map.put("calls", apiCalled);
+        map.put("WeatherApiCalls", weatherApiCalled);
+        map.put("GeolocationApiCalls", geoApiCalled);
         map.put("hits", apiHits);
         map.put("misses", apiMisses);
         map.put("cacheUsage", usedCache);
         return new Gson().toJson(map);
     }
 
+    @Async
+    public LatLng callGeolocationAPI(String name) throws IOException, ParseException {
+        geoApiCalled++;
+        String url_str = String.format("https://api.opencagedata.com/geocode/v1/json?q=%s&key=%s&pretty=1",
+                name, GEO_API_KEY);
 
+        URL url = new URL(url_str);
+
+        //Make GET Request
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("GET");
+        conn.connect();
+
+        JOpenCageGeocoder jOpenCageGeocoder = new JOpenCageGeocoder(GEO_API_KEY);
+        JOpenCageForwardRequest request = new JOpenCageForwardRequest(name);
+
+        JOpenCageResponse response = jOpenCageGeocoder.forward(request);
+
+        JOpenCageLatLng firstResultLatLng = response.getFirstPosition();
+        LatLng finalLocation = new LatLng(firstResultLatLng.getLng(),firstResultLatLng.getLat());
+
+        return finalLocation;
+
+    }
 
     @Async
     public WeatherData callAPI(Double lat, Double lon) throws IOException, ParseException {
-        apiCalled++;
+        weatherApiCalled++;
         String url_str = String.format("http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&appid=%s", lat, lon, API_KEY);
         URL url = new URL(url_str);
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -75,20 +113,11 @@ public class ApiRes {
             apiHits++;
             String inline = "";
             Scanner scanner = new Scanner(url.openStream());
-
-            //Write all the JSON data into a string
             while (scanner.hasNext()) {
                 inline += scanner.nextLine();
             }
             scanner.close();
-
-
-            // Creating a Gson Object
             Gson gson = new Gson();
-
-            // Converting json to object
-            // first parameter should be prpreocessed json
-            // and second should be mapping class
             WeatherData wd = gson.fromJson(inline, WeatherData.class);
 
             return wd;

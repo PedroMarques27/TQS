@@ -1,7 +1,7 @@
 package hw.weatherbit.homework;
 
 public class ApiRequest {
-    public static final long TIME_OUT = 120000;
+    public static int TIME_OUT = 120000;
     private WeatherData requestData;
     private long requestTime;
 
@@ -20,5 +20,11 @@ public class ApiRequest {
     public WeatherData getData(){
         return this.requestData;
     }
+
+    public void setTimeOut(int i){
+        TIME_OUT = i;
+    }
+
+
 
 }

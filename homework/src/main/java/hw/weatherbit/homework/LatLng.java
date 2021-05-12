@@ -9,7 +9,8 @@ public class LatLng {
     }
 
     public void setLatitude(double latitude) {
-        this.latitude = latitude;
+        if (latitude<=90 && latitude>=-90)
+            this.latitude = latitude;
     }
 
     public double getLongitude() {
@@ -17,7 +18,9 @@ public class LatLng {
     }
 
     public void setLongitude(double longitude) {
-        this.longitude = longitude;
+        if (longitude<=180 && longitude>=-180)
+            this.longitude = longitude;
+
     }
 
     public LatLng(double latitude, double longitude) {

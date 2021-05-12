@@ -16,6 +16,12 @@ public class Location {
 
     }
 
+    public LatLng getLatLng(){
+        if (coordinates == null)
+            throw new NullPointerException();
+        return this.coordinates;
+    }
+
     public double getLatitude() {
         return coordinates.getLatitude();
     }
@@ -33,6 +39,8 @@ public class Location {
     }
 
     public String getCity() {
+        if (city == null)
+            throw new NullPointerException();
         return city;
     }
 
