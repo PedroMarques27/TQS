@@ -1,0 +1,35 @@
+
+`	java:S112I"FDefine and throw a dedicated exception instead of using a generic one.(‡¤„èÿÿÿÿÿ
+7
+java:S1643Q"Use a StringBuilder instead.(§Úç‰øÿÿÿÿ
+f	java:S117>"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şãßå
+p
+java:S1488\"ZImmediately return this expression instead of assigning it to the temporary variable "wd".(Ûõò½
+T
+java:S1128"9Remove this unused import 'org.springframework.ui.Model'.(ê†ıÿÿÿÿ
+a
+java:S1128"FRemove this unused import 'org.springframework.stereotype.Controller'.(øŠ—Öùÿÿÿÿ
+F
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ
+M
+java:S1854 "8Remove this useless assignment to local variable "data".(Ÿ–¢1
+E
+java:S6212"/Declare this local variable with "var" instead.(…ûƒÑ
+D
+java:S6212 "/Declare this local variable with "var" instead.(Ÿ–¢1
+‚
+java:S11300"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(®Ì±Å
+”
+java:S11300"~Remove the declaration of thrown exception 'org.json.simple.parser.ParseException', as it cannot be thrown from method's body.(®Ì±Å
+”
+java:S1130<"~Remove the declaration of thrown exception 'org.json.simple.parser.ParseException', as it cannot be thrown from method's body.(öõíØ
+E
+java:S6212>"/Declare this local variable with "var" instead.(şãßå
+E
+java:S6212?"/Declare this local variable with "var" instead.(¼ë€…
+J
+java:S6212L"/Declare this local variable with "var" instead.(ÁšÕàüÿÿÿÿ
+E
+java:S6212M"/Declare this local variable with "var" instead.(ôøş—
+E
+java:S6212W"/Declare this local variable with "var" instead.(şëŒ

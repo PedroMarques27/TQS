@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae8180bc-7f0a-4084-acdd-f1f348b7b508" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiRes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/LatLng.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/LatLng.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/Location.java" afterDir="false" />
-    </list>
+    <list default="true" id="ae8180bc-7f0a-4084-acdd-f1f348b7b508" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +93,7 @@
       <workItem from="1620392153379" duration="562000" />
       <workItem from="1620568225806" duration="361000" />
       <workItem from="1620658860484" duration="3551000" />
-      <workItem from="1620811752615" duration="3899000" />
+      <workItem from="1620811752615" duration="4562000" />
     </task>
     <servers />
   </component>
