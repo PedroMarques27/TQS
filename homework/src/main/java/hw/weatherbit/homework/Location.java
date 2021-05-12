@@ -3,14 +3,12 @@ package hw.weatherbit.homework;
 import java.util.ArrayList;
 
 public class Location {
-    private double latitude;
-    private double longitude;
+    private LatLng coordinates;
 
     private String city;
 
     public Location(double latitude, double longitude, String city) {
-        this.latitude = latitude;
-        this.longitude = longitude;
+        this.coordinates = new LatLng(latitude, longitude);
         this.city = city;
     }
 
@@ -19,19 +17,19 @@ public class Location {
     }
 
     public double getLatitude() {
-        return latitude;
+        return coordinates.getLatitude();
     }
 
     public void setLatitude(double latitude) {
-        this.latitude = latitude;
+        this.coordinates.setLatitude(latitude);
     }
 
     public double getLongitude() {
-        return longitude;
+        return coordinates.getLongitude();
     }
 
     public void setLongitude(double longitude) {
-        this.longitude = longitude;
+        this.coordinates.setLongitude(longitude);
     }
 
     public String getCity() {
