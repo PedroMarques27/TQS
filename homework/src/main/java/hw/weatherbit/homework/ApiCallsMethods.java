@@ -21,14 +21,16 @@ import java.util.Scanner;
 
 public class ApiCallsMethods {
     public static final String API_KEY = "87d54ca4f1f15bfd6e6592f1d7456571";
-    public static int weatherApiCalled = 0;
-    private static final String GEO_API_KEY = "04d52af6c36e4f2bbf04224f96cfcbcc";
-    public static int geoApiCalled = 0;
 
+    private static final String GEO_API_KEY = "04d52af6c36e4f2bbf04224f96cfcbcc";
+
+
+    public static int geoApiCalled = 0;
+    public static int weatherApiCalled = 0;
     public static int apiHits = 0;
     public static int apiMisses = 0;
 
-    public static WeatherData callWeatherAPI(Location city) throws IOException, ParseException {
+    public WeatherData callWeatherAPI(Location city) throws IOException, ParseException {
         weatherApiCalled++;
         String url_str = String.format("http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&appid=%s",
                 city.getLatitude(), city.getLongitude(), API_KEY);
@@ -61,7 +63,7 @@ public class ApiCallsMethods {
     }
 
 
-    public static Location callGeolocationAPIByLatLng(LatLng latlng) throws IOException, ParseException {
+    public Location callGeolocationAPIByLatLng(LatLng latlng) throws IOException, ParseException {
         geoApiCalled++;
 
         JOpenCageGeocoder jOpenCageGeocoder = new JOpenCageGeocoder(GEO_API_KEY);
@@ -80,7 +82,7 @@ public class ApiCallsMethods {
         return finalLocation;
     }
 
-    public static Location callGeolocationAPIByAddress(String name) throws IOException, ParseException {
+    public Location callGeolocationAPIByAddress(String name) throws IOException, ParseException {
         geoApiCalled++;
         String url_str = String.format("https://api.opencagedata.com/geocode/v1/json?q=%s&key=%s&pretty=1",
                 name, GEO_API_KEY);
@@ -104,7 +106,7 @@ public class ApiCallsMethods {
 
     }
 
-    public static void addLog(String logData) throws IOException {
+    public void addLog(String logData) throws IOException {
         File file = new File("log.txt");
         CharSink chs = Files.asCharSink(
                 file, Charsets.UTF_8, FileWriteMode.APPEND);

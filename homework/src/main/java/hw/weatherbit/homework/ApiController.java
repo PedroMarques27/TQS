@@ -26,7 +26,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import static hw.weatherbit.homework.ApiCallsMethods.callWeatherAPI;
 import static hw.weatherbit.homework.ApiCallsMethods.weatherApiCalled;
 
 
@@ -35,6 +34,7 @@ import static hw.weatherbit.homework.ApiCallsMethods.weatherApiCalled;
 public class ApiController {
     ArrayList<Location> locations = Location.getLocations();
     HashMap<Location, ApiRequest> cache = new HashMap<>();
+    ApiCallsMethods acm = new ApiCallsMethods();
 
     private static final String GEO_API_KEY = "04d52af6c36e4f2bbf04224f96cfcbcc";
     @GetMapping("/")
@@ -58,7 +58,7 @@ public class ApiController {
                         data = cache.get(c).getData();
 
                 }else{
-                    data = callWeatherAPI(c);
+                    data = acm.callWeatherAPI(c);
                     cache.put(c,new ApiRequest(data));
                 }
 

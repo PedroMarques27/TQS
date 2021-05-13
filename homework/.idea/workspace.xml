@@ -5,35 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae8180bc-7f0a-4084-acdd-f1f348b7b508" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiCallsMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_1_3_9.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_3_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_0_18.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_28_1_jre.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_23_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_2_8_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_18.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/ApiCallsMethodsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/ApiRestTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework.iml" beforeDir="false" afterPath="$PROJECT_DIR$/homework.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiCallsMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiCallsMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/WeatherData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/WeatherData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/ApiController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/ApiRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/ApiResTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/ApiCallsMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/ApiCallsMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/ApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/ApiController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/ApiRest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/HomeworkApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/LatLng.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/Location.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/WeatherData$Clouds.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/WeatherData$Coord.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/WeatherData$Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/WeatherData$Sys.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/WeatherData$Weather.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/WeatherData$Wind.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/WeatherData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-hw.weatherbit.homework.ApiRequestTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-hw.weatherbit.homework.ApiRequestTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-hw.weatherbit.homework.ApiResTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-hw.weatherbit.homework.HomeworkApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-hw.weatherbit.homework.LocationTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-hw.weatherbit.homework.LocationTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/hw.weatherbit.homework.ApiRequestTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/hw.weatherbit.homework.ApiRequestTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/hw.weatherbit.homework.ApiResTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/hw.weatherbit.homework.HomeworkApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/hw.weatherbit.homework.LocationTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/hw.weatherbit.homework.LocationTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/hw/weatherbit/homework/ApiResTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,13 +38,21 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1s4ZSstGEYKngeNg6H0HlJaKuOf" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -95,7 +97,9 @@
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
+      <command value="mvn clean" />
       <command value="mvn compile" />
+      <command value="mvn compiler:testCompile" />
       <command value="mvn test" />
     </option>
   </component>
@@ -173,6 +177,8 @@
       <workItem from="1620811752615" duration="4562000" />
       <workItem from="1620824196140" duration="3900000" />
       <workItem from="1620898771445" duration="4835000" />
+      <workItem from="1620913839446" duration="1052000" />
+      <workItem from="1620915391750" duration="5788000" />
     </task>
     <servers />
   </component>

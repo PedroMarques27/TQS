@@ -1,0 +1,35 @@
+
+L
+java:S2440"/Remove this instantiation of "ApiCallsMethods".(φ–Τ8ολφ±–/
+M
+java:S1854"8Remove this useless assignment to local variable "data".(–Ά1
+E
+java:S6212"/Declare this local variable with "var" instead.(…ϋƒΡ
+D
+java:S6212"/Declare this local variable with "var" instead.(–Ά1
+D
+java:S6212"/Declare this local variable with "var" instead.(α‡«E
+Q
+java:S2209"5Change this instance-reference to a static reference.(α‡«E8λ€χ±–/
+W
+java:S2209#"5Change this instance-reference to a static reference.(Γώ–όÿÿÿÿ8®χ±–/
+M
+java:S18541"8Remove this useless assignment to local variable "data".(–Ά1
+J
+java:S6212."/Declare this local variable with "var" instead.(³²κµόÿÿÿÿ
+W
+java:S2209."5Change this instance-reference to a static reference.(³²κµόÿÿÿÿ8ναχ±–/
+E
+java:S6212/"/Declare this local variable with "var" instead.(Β™‚°
+D
+java:S62121"/Declare this local variable with "var" instead.(–Ά1
+R
+java:S22098"5Change this instance-reference to a static reference.(κΉ³8οαχ±–/
+‚
+java:S1130B"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(§βΊ
+”
+java:S1130B"~Remove the declaration of thrown exception 'org.json.simple.parser.ParseException', as it cannot be thrown from method's body.(§βΊ
+‚
+java:S1130P"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(®Μ±Ε
+”
+java:S1130P"~Remove the declaration of thrown exception 'org.json.simple.parser.ParseException', as it cannot be thrown from method's body.(®Μ±Ε

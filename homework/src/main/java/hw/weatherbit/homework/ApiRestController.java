@@ -1,43 +1,30 @@
 package hw.weatherbit.homework;
 
-import com.byteowls.jopencage.JOpenCageGeocoder;
-import com.byteowls.jopencage.model.JOpenCageForwardRequest;
-import com.byteowls.jopencage.model.JOpenCageLatLng;
-import com.byteowls.jopencage.model.JOpenCageResponse;
-import com.byteowls.jopencage.model.JOpenCageReverseRequest;
 import com.google.gson.Gson;
 import org.json.simple.parser.ParseException;
-import org.springframework.scheduling.annotation.Async;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Optional;
-import java.util.Scanner;
-
 import static hw.weatherbit.homework.ApiCallsMethods.*;
 
 @RestController
 @RequestMapping("/")
-public class ApiRest {
+public class ApiRestController {
     HashMap<Integer, ApiRequest> cache = new HashMap<>();
     ArrayList<Location> locHash = new ArrayList<>();
-
+    ApiCallsMethods acm = new ApiCallsMethods();
 
     private int usedCache = 0;
 
     @GetMapping("/api/v1/weather/location")
-    public String postWeatherByLocation(@RequestParam Double lat,@RequestParam Double lng) throws IOException, ParseException {
+    public String getWeatherByLocation(@RequestParam Double lat,@RequestParam Double lng) throws IOException, ParseException {
 
             LatLng c = new LatLng(lat, lng);
 
             WeatherData data = new WeatherData();
-            Location n = ApiCallsMethods.callGeolocationAPIByLatLng(c);
+            Location n = acm.callGeolocationAPIByLatLng(c);
 
 
             if (cache.containsKey(c.hashCode()) && cache.get(c.hashCode()).isValid() ){
@@ -45,7 +32,7 @@ public class ApiRest {
                 data = cache.get(c.hashCode()).getData();
 
             }else{
-                data = callWeatherAPI(n);
+                data = acm.callWeatherAPI(n);
                 cache.put(c.hashCode(),new ApiRequest(data));
                 locHash.add(n);
             }
@@ -56,7 +43,7 @@ public class ApiRest {
 
     @GetMapping("/api/v1/weather/address")
     public String getWeatherByAddress(@RequestParam String q) throws IOException, ParseException {
-        Location current = callGeolocationAPIByAddress(q);
+        Location current = acm.callGeolocationAPIByAddress(q);
         LatLng c = current.getLatLng();
 
         WeatherData data = new WeatherData();
@@ -66,7 +53,7 @@ public class ApiRest {
             data = cache.get(c.hashCode()).getData();
 
         }else{
-            data = callWeatherAPI(current);
+            data = acm.callWeatherAPI(current);
             cache.put(c.hashCode(),new ApiRequest(data));
             locHash.add(current);
         }
