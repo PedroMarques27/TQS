@@ -51,11 +51,13 @@ class ApiCallsMethodsTest {
 
     @Test
     void callWeatherAPI() throws IOException, ParseException {
-        Location data = acm.callGeolocationAPIByLatLng(new LatLng(42.6446276, -8.9490691));
-
+        WeatherData data = acm.callWeatherAPI(new Location(40.6446276, -8.6490691, "Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal"));
+        assertThat(data.location,equalTo("Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal") );
 
 
     }
+
+
 
     @Test
     void callGeolocationAPIByLatLng() throws IOException, ParseException {

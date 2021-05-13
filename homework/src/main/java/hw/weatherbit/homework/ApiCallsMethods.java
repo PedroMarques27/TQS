@@ -34,7 +34,7 @@ public class ApiCallsMethods {
     public WeatherData callWeatherAPI(Location city) throws IOException, ParseException {
         String url_str = String.format("http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&appid=%s",
                 city.getLatitude(), city.getLongitude(), API_KEY);
-
+        addLog(String.format("Called Weather API For Location %s (%.4f,%.4g)",city.getCity(),city.getLatitude(),city.getLongitude()));
         URL url = new URL(url_str);
         //Make GET Request
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -65,6 +65,7 @@ public class ApiCallsMethods {
 
 
     public Location callGeolocationAPIByLatLng(LatLng latlng) throws IOException, ParseException {
+        addLog("Calling jOpenCageGeocoder: Coordinates to Address");
         JOpenCageGeocoder jOpenCageGeocoder = new JOpenCageGeocoder(GEO_API_KEY);
 
         JOpenCageReverseRequest request = new JOpenCageReverseRequest(latlng.getLatitude(), latlng.getLongitude());
@@ -82,6 +83,7 @@ public class ApiCallsMethods {
     }
 
     public Location callGeolocationAPIByAddress(String name) throws IOException, ParseException {
+        addLog("Called jOpenCageGeocoder: Address to Coordinates");
         String url_str = String.format("https://api.opencagedata.com/geocode/v1/json?q=%s&key=%s&pretty=1",
                 name, GEO_API_KEY);
 
@@ -110,6 +112,6 @@ public class ApiCallsMethods {
         File file = new File("log.txt");
         CharSink chs = Files.asCharSink(
                 file, Charsets.UTF_8, FileWriteMode.APPEND);
-        chs.write(System.currentTimeMillis()+": "+logData);
+        chs.write(System.currentTimeMillis()+": "+logData+"\n");
     }
 }

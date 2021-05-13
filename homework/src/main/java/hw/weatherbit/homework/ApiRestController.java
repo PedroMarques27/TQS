@@ -19,7 +19,7 @@ public class ApiRestController {
 
     @GetMapping("/api/v1/weather/location")
     public String getWeatherByLocation(@RequestParam Double lat,@RequestParam Double lng) throws IOException, ParseException {
-
+            acm.addLog("Using REST API To Get Weather By Coordinates");
             LatLng c = new LatLng(lat, lng);
 
             WeatherData data = new WeatherData();
@@ -44,6 +44,7 @@ public class ApiRestController {
 
     @GetMapping("/api/v1/weather/address")
     public String getWeatherByAddress(@RequestParam String q) throws IOException, ParseException {
+        acm.addLog("Using REST API To Get Weather By Address");
         Location current = acm.callGeolocationAPIByAddress(q);
         ApiCallsMethods.geoApiCalled++;
         LatLng c = current.getLatLng();
@@ -67,6 +68,7 @@ public class ApiRestController {
 
     @GetMapping("/api/v1/weather/cache")
     public String getCachedData() throws IOException, ParseException {
+        acm.addLog("Using REST API To Get Cached Weather Data");
         HashMap<String, ApiRequest> data=  new HashMap<>();
         for (Location l : locHash){
             int ha =  l.getLatLng().hashCode();
@@ -81,6 +83,7 @@ public class ApiRestController {
 
     @GetMapping("/api/v1/weather/statistics")
     public String getStatistics() throws IOException, ParseException {
+        acm.addLog("Using REST API To Get Statistics");
         HashMap<String, Integer> map = new HashMap<>();
         map.put("WeatherApiCalls", ApiCallsMethods.weatherApiCalled);
         map.put("GeolocationApiCalls", ApiCallsMethods.geoApiCalled);

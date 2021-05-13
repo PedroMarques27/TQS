@@ -109,6 +109,39 @@ class ApiRestTest {
         assertThat(data, containsString("15948 Petón do Currumil, Espanha"));
 
     }
+    @Test
+    @Order(5)
+    void cacheDoesntAddIfExisting() throws IOException, ParseException, InterruptedException {
+        restController.cache.clear();
+        restController.getWeatherByLocation(40.6446276, -8.6490691);
+        restController.getWeatherByLocation(42.6446276, -8.9490691);
+        restController.getWeatherByLocation(42.6446276, -8.9490691);
+
+
+       assertThat(restController.cache.keySet().size(), equalTo(2));
+
+    }
+    @Test
+    @Order(6)
+    void cacheNotValidUpdate() throws IOException, ParseException, InterruptedException {
+        restController.cache.clear();
+        ApiRequest.TIME_OUT=5000;
+        restController.getWeatherByLocation(42.6446276, -8.9490691);
+        assertThat(restController.cache.keySet().size(),equalTo(1));
+        int code = (int) restController.cache.keySet().toArray()[0];
+        assertThat(restController.cache.get(code).isValid(), equalTo(true));
+
+
+        Thread.sleep(6000);
+        assertThat(restController.cache.get(code).isValid(), equalTo(false));
+        restController.getWeatherByLocation(42.6446276, -8.9490691);
+        assertThat(restController.cache.keySet().size(),equalTo(1));
+
+        assertThat(restController.cache.get(code).isValid(), equalTo(true));
+
+
+
+    }
 
     @Test
     @Order(1)

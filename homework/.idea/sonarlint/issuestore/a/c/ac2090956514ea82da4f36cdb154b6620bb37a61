@@ -1,11 +1,11 @@
 
 M
-java:S1854'"8Remove this useless assignment to local variable "data".(Ÿ–¢1
+java:S1854)"8Remove this useless assignment to local variable "data".(Ÿ–¢1
 D
-java:S6212'"/Declare this local variable with "var" instead.(Ÿ–¢1
-S
-java:S2696)"6Make the enclosing method "static" or remove this set.(Ööî8¬öÑ´–/
-S
-java:S2696."6Make the enclosing method "static" or remove this set.(éâ¿Ç8ŒÏÎ´–/
+java:S6212)"/Declare this local variable with "var" instead.(Ÿ–¢1
+L
+java:S2696+"6Make the enclosing method "static" or remove this set.(Ööî
+L
+java:S26960"6Make the enclosing method "static" or remove this set.(éâ¿Ç
 J
 java:S1068"/Remove this unused "GEO_API_KEY" private field.(İÏÄËûÿÿÿÿ

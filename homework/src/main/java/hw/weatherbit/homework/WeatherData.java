@@ -10,6 +10,7 @@ public class WeatherData{
     public int visibility;
     public Wind wind;
     public Clouds clouds;
+    public String name;
     public int dt;
     public Sys sys;
     public int timezone;
