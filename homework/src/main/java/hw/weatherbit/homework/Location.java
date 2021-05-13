@@ -16,6 +16,9 @@ public class Location {
 
     }
 
+    public Location(String name, LatLng latLng) {
+    }
+
     public LatLng getLatLng(){
         if (coordinates == null)
             throw new NullPointerException();

@@ -13,7 +13,7 @@ public class WeatherData{
     public int dt;
     public Sys sys;
     public int timezone;
-    public String name;
+    public String location;
 
 
     public class Coord{
