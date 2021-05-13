@@ -29,14 +29,13 @@ public class ApiCallsMethods {
     public static int weatherApiCalled = 0;
     public static int apiHits = 0;
     public static int apiMisses = 0;
+    public static int usedCache = 0;
 
     public WeatherData callWeatherAPI(Location city) throws IOException, ParseException {
-        weatherApiCalled++;
         String url_str = String.format("http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&appid=%s",
                 city.getLatitude(), city.getLongitude(), API_KEY);
 
         URL url = new URL(url_str);
-
         //Make GET Request
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
@@ -45,8 +44,10 @@ public class ApiCallsMethods {
         int responsecode = conn.getResponseCode();
 
         if (responsecode != 200) {
+            apiMisses++;
             throw new RuntimeException("HttpResponseCode: " + responsecode);
         } else {
+            apiHits++;
             String inline = "";
             Scanner scanner = new Scanner(url.openStream());
 
@@ -64,8 +65,6 @@ public class ApiCallsMethods {
 
 
     public Location callGeolocationAPIByLatLng(LatLng latlng) throws IOException, ParseException {
-        geoApiCalled++;
-
         JOpenCageGeocoder jOpenCageGeocoder = new JOpenCageGeocoder(GEO_API_KEY);
 
         JOpenCageReverseRequest request = new JOpenCageReverseRequest(latlng.getLatitude(), latlng.getLongitude());
@@ -83,12 +82,12 @@ public class ApiCallsMethods {
     }
 
     public Location callGeolocationAPIByAddress(String name) throws IOException, ParseException {
-        geoApiCalled++;
         String url_str = String.format("https://api.opencagedata.com/geocode/v1/json?q=%s&key=%s&pretty=1",
                 name, GEO_API_KEY);
 
         URL url = new URL(url_str);
-
+        Location finalLocation = new Location();
+        finalLocation.setCity(name);
         //Make GET Request
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
@@ -100,7 +99,8 @@ public class ApiCallsMethods {
         JOpenCageResponse response = jOpenCageGeocoder.forward(request);
 
         JOpenCageLatLng firstResultLatLng = response.getFirstPosition();
-        Location finalLocation = new Location(firstResultLatLng.getLng(), firstResultLatLng.getLat(), name);
+        finalLocation.setLatitude(firstResultLatLng.getLat());
+        finalLocation.setLongitude(firstResultLatLng.getLng());
 
         return finalLocation;
 

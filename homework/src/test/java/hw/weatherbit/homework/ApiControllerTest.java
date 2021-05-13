@@ -3,6 +3,8 @@ import io.github.bonigarcia.seljup.SeleniumJupiter;
 import org.junit.Test;
 import org.junit.Before;
 import org.junit.After;
+
+import static org.hamcrest.Matchers.containsString;
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.core.IsNot.not;
@@ -26,7 +28,7 @@ import java.util.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 @ExtendWith(SeleniumJupiter.class)
-public class GetDataTestTest {
+public class ApiControllerTest {
   private WebDriver driver;
   private Map<String, Object> vars;
   JavascriptExecutor js;
@@ -53,7 +55,7 @@ public class GetDataTestTest {
     }
     String value = driver.findElement(By.id("apiCalls")).getText();
 
-    assertTrue("API Called 0 times".equals(value));
+    assertThat("API Called 0 times",containsString(value));
     driver.findElement(By.name("redSoc")).click();
     driver.findElement(By.cssSelector("input")).click();
 
@@ -65,7 +67,7 @@ public class GetDataTestTest {
       dropdown.findElement(By.xpath("//option[. = 'Paris']")).click();
     }
     value = driver.findElement(By.id("apiCalls")).getText();
-    assertTrue("API Called 1 times".equals(value));
+    assertThat("API Called 1 times", containsString(value));
 
     driver.findElement(By.name("redSoc")).click();
     driver.findElement(By.cssSelector("input")).click();
@@ -75,12 +77,12 @@ public class GetDataTestTest {
       dropdown.findElement(By.xpath("//option[. = 'Budapest']")).click();
     }
     value = driver.findElement(By.id("apiCalls")).getText();
-    assertTrue("API Called 2 times".equals(value));
+    assertThat("API Called 2 times", containsString(value));
     driver.findElement(By.name("redSoc")).click();
     driver.findElement(By.cssSelector("input")).click();
 
     value = driver.findElement(By.id("apiCalls")).getText();
-    assertTrue("API Called 2 times".equals(value));
+    assertThat("API Called 2 times", containsString(value));
     driver.close();
   }
 }

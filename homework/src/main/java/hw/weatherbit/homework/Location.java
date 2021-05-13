@@ -3,7 +3,7 @@ package hw.weatherbit.homework;
 import java.util.ArrayList;
 
 public class Location {
-    private LatLng coordinates;
+    private LatLng coordinates = new LatLng();
 
     private String city;
 

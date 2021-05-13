@@ -4,6 +4,7 @@ import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import org.json.simple.parser.ParseException;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -41,15 +42,19 @@ class ApiRestTest {
     String weatherExample = "{'coord':{'lon':-8.6491,'lat':40.6446},'weather':[{'id':804,'main':'Clouds','description':'overcast clouds','icon':'04d'}],'base':'stations','main':{'temp':291.36,'feels_like':291.27,'temp_min':289.85,'temp_max':292.51,'pressure':1018,'humidity':78,'sea_level':1018,'grnd_level':1017},'visibility':10000,'wind':{'speed':6.67,'deg':294,'gust':8.71},'clouds':{'all':94},'dt':1620916522,'sys':{'type':1,'id':6898,'country':'PT','sunrise':1620883178,'sunset':1620934942},'timezone':3600,'id':8010750,'name':'Glória','cod':200}";
     String weatherExample2 = "{\"coord\":{\"lon\":-8.9491,\"lat\":42.6446},\"weather\":[{\"main\":\"Clouds\"}],\"base\":\"stations\",\"main\":{\"temp\":288.03,\"feels_like\":287.56,\"temp_min\":283.97,\"temp_max\":291.51,\"pressure\":1016,\"humidity\":76},\"visibility\":10000,\"wind\":{\"speed\":4.43},\"clouds\":{\"all\":83},\"dt\":1620920392,\"sys\":{\"type\":2,\"message\":0.0,\"country\":\"ES\",\"sunrise\":1620882939,\"sunset\":1620935326},\"timezone\":7200,\"location\":\"15948 Petón do Currumil, Espanha\"}";
 
+    LatLng point1 = new LatLng(40.6446276,-8.6490691);
+    LatLng point2 = new LatLng(42.6446276,-8.9490691);
+
     @BeforeEach
     void setUp() throws IOException, ParseException {
+        ApiRequest.TIME_OUT = 120000;
         WeatherData dt = new Gson().fromJson(weatherExample,WeatherData.class);
         restController = new ApiRestController();
         when(acm.callWeatherAPI(new Location(40.6446276,-8.6490691, "Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal"))).thenReturn(
                 dt
         );
 
-        when(acm.callGeolocationAPIByLatLng(new LatLng(40.6446276,-8.6490691))).thenReturn(
+        when(acm.callGeolocationAPIByLatLng(point1)).thenReturn(
                 new Location(40.6446276, -8.6490691, "Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal")
         );
 
@@ -63,7 +68,7 @@ class ApiRestTest {
                 dt
         );
 
-        when(acm.callGeolocationAPIByLatLng(new LatLng(42.6446276,-8.6490691))).thenReturn(
+        when(acm.callGeolocationAPIByLatLng(point2)).thenReturn(
                 new Location(42.6446276, -8.9490691, "15948 Petón do Currumil, Espanha")
         );
 
@@ -71,21 +76,30 @@ class ApiRestTest {
                 new Location(42.6446276, -8.9490691, "15948 Petón do Currumil, Espanha")
         );
 
+
+        ApiCallsMethods.geoApiCalled = 0;
+        ApiCallsMethods.weatherApiCalled = 0;
+        ApiCallsMethods.apiHits = 0;
+        ApiCallsMethods.apiMisses = 0;
+        ApiCallsMethods.usedCache = 0;
     }
 
     @Test
+    @Order(2)
     void getWeatherByLocation() throws Exception {
             String result = restController.getWeatherByLocation(40.6446276, -8.6490691);
             assertThat(result, containsString("Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal"));
     }
 
     @Test
+    @Order(3)
     void getWeatherByAddress() throws IOException, ParseException {
         String result = restController.getWeatherByAddress("Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal");
         assertThat(result,containsString("Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal"));
     }
 
     @Test
+    @Order(4)
     void getCachedData() throws IOException, ParseException {
         restController.getWeatherByLocation(40.6446276, -8.6490691);
         restController.getWeatherByLocation(42.6446276, -8.9490691);
@@ -97,6 +111,7 @@ class ApiRestTest {
     }
 
     @Test
+    @Order(1)
     void getStatistics() throws IOException, ParseException {
         restController.getWeatherByLocation(40.6446276, -8.6490691);
         restController.getWeatherByLocation(42.6446276, -8.9490691);
@@ -104,13 +119,13 @@ class ApiRestTest {
 
         String dataJson = restController.getStatistics();
         Type type = new TypeToken<Map<String, Integer>>(){}.getType();
-        HashMap<String, Integer> statistics = new Gson().fromJson(dataJson, type);
+        Map<String, Integer> statistics = new Gson().fromJson(dataJson, type);
 
         assertThat(statistics.get("hits"), equalTo(2));
-        assertThat(statistics.get("GeolocationApiCalls"), equalTo(2));
+        assertThat(statistics.get("GeolocationApiCalls"), equalTo(3));
         assertThat(statistics.get("WeatherApiCalls"), equalTo(2));
-        assertThat(statistics.get("hits"), equalTo(2));
-        assertThat(statistics.get("misses"), equalTo(2));
+        assertThat(statistics.get("cacheUsage"), equalTo(1));
+        assertThat(statistics.get("misses"), equalTo(0));
 
     }
 }

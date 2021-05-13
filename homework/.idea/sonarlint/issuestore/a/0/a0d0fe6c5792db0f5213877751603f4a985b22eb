@@ -1,73 +1,73 @@
 
 H
 java:S1444"2Make this "public static geoApiCalled" field final(Îãİç
-X
-java:S1444"6Make this "public static weatherApiCalled" field final(åî†ûÿÿÿÿ8™¾ó±–/
+Q
+java:S1444"6Make this "public static weatherApiCalled" field final(åî†ûÿÿÿÿ
 C
 java:S1444"-Make this "public static apiHits" field final(÷¨õŸ
 J
 java:S1444"/Make this "public static apiMisses" field final(çéØøÿÿÿÿ
+J
+java:S1444 "/Make this "public static usedCache" field final(©ßüşÿÿÿÿ
 `	java:S1120"FDefine and throw a dedicated exception instead of using a generic one.(‡¤„èÿÿÿÿÿ
 7
-java:S16437"Use a StringBuilder instead.(§Úç‰øÿÿÿÿ
+java:S16438"Use a StringBuilder instead.(§Úç‰øÿÿÿÿ
 k	java:S117#"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§ı²éùÿÿÿÿ
-f	java:S117W"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú¹—
+f	java:S117U"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú¹—
 n
 java:S1104"XMake geoApiCalled a static final constant or non-public and provide accessors if needed.(Îãİç
-~
-java:S1104"\Make weatherApiCalled a static final constant or non-public and provide accessors if needed.(åî†ûÿÿÿÿ8¾ó±–/
+w
+java:S1104"\Make weatherApiCalled a static final constant or non-public and provide accessors if needed.(åî†ûÿÿÿÿ
 i
 java:S1104"SMake apiHits a static final constant or non-public and provide accessors if needed.(÷¨õŸ
 p
 java:S1104"UMake apiMisses a static final constant or non-public and provide accessors if needed.(çéØøÿÿÿÿ
 p
-java:S1488;"ZImmediately return this expression instead of assigning it to the temporary variable "wd".(Ûõò½
+java:S1104 "UMake usedCache a static final constant or non-public and provide accessors if needed.(©ßüşÿÿÿÿ
+p
+java:S1488<"ZImmediately return this expression instead of assigning it to the temporary variable "wd".(Ûõò½
 €
-java:S1488P"eImmediately return this expression instead of assigning it to the temporary variable "finalLocation".(ı×ãáûÿÿÿÿ
-{
-java:S1488g"eImmediately return this expression instead of assigning it to the temporary variable "finalLocation".(§¾˜
+java:S1488O"eImmediately return this expression instead of assigning it to the temporary variable "finalLocation".(ı×ãáûÿÿÿÿ
 g
 java:S1128"LRemove this unused import 'org.springframework.scheduling.annotation.Async'.(İë€Ûúÿÿÿÿ
 ™
-java:S1130!"~Remove the declaration of thrown exception 'org.json.simple.parser.ParseException', as it cannot be thrown from method's body.(ø¼ ßùÿÿÿÿ
-S
-java:S2696""6Make the enclosing method "static" or remove this set.(éâ¿Ç8Œšò±–/
+java:S1130""~Remove the declaration of thrown exception 'org.json.simple.parser.ParseException', as it cannot be thrown from method's body.(ø¼ ßùÿÿÿÿ
 J
 java:S6212#"/Declare this local variable with "var" instead.(§ı²éùÿÿÿÿ
 E
 java:S6212&"/Declare this local variable with "var" instead.(¼ë€…
+Q
+java:S2696/"6Make the enclosing method "static" or remove this set.(Ñ…‰üÿÿÿÿ
+Q
+java:S26962"6Make the enclosing method "static" or remove this set.(‡Øıÿÿÿÿÿ
 J
-java:S62122"/Declare this local variable with "var" instead.(ÁšÕàüÿÿÿÿ
+java:S62123"/Declare this local variable with "var" instead.(ÁšÕàüÿÿÿÿ
 E
-java:S62123"/Declare this local variable with "var" instead.(ôøş—
+java:S62124"/Declare this local variable with "var" instead.(ôøş—
 E
-java:S6212:"/Declare this local variable with "var" instead.(şëŒ
+java:S6212;"/Declare this local variable with "var" instead.(şëŒ
 ‚
-java:S1130B"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(„·šÿ
+java:S1130C"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(„·šÿ
 ”
-java:S1130B"~Remove the declaration of thrown exception 'org.json.simple.parser.ParseException', as it cannot be thrown from method's body.(„·šÿ
-S
-java:S2696C"6Make the enclosing method "static" or remove this set.(Şºº«8¹Úò±–/
+java:S1130C"~Remove the declaration of thrown exception 'org.json.simple.parser.ParseException', as it cannot be thrown from method's body.(„·šÿ
 J
-java:S6212E"/Declare this local variable with "var" instead.(¤æŞªÿÿÿÿÿ
+java:S6212D"/Declare this local variable with "var" instead.(¤æŞªÿÿÿÿÿ
 J
-java:S6212G"/Declare this local variable with "var" instead.(ÈâÉõüÿÿÿÿ
+java:S6212F"/Declare this local variable with "var" instead.(ÈâÉõüÿÿÿÿ
 J
-java:S6212P"/Declare this local variable with "var" instead.(ı×ãáûÿÿÿÿ
+java:S6212O"/Declare this local variable with "var" instead.(ı×ãáûÿÿÿÿ
 ™
-java:S1130U"~Remove the declaration of thrown exception 'org.json.simple.parser.ParseException', as it cannot be thrown from method's body.(Şäß‘úÿÿÿÿ
-S
-java:S2696V"6Make the enclosing method "static" or remove this set.(Şºº«8ÌÚò±–/
+java:S1130T"~Remove the declaration of thrown exception 'org.json.simple.parser.ParseException', as it cannot be thrown from method's body.(Şäß‘úÿÿÿÿ
 E
-java:S6212W"/Declare this local variable with "var" instead.(ú¹—
+java:S6212U"/Declare this local variable with "var" instead.(ú¹—
 E
-java:S6212Z"/Declare this local variable with "var" instead.(¼ë€…
+java:S6212X"/Declare this local variable with "var" instead.(¼ë€…
 J
-java:S6212a"/Declare this local variable with "var" instead.(¤æŞªÿÿÿÿÿ
+java:S6212Y"/Declare this local variable with "var" instead.(û¸†¯ûÿÿÿÿ
+J
+java:S6212`"/Declare this local variable with "var" instead.(¤æŞªÿÿÿÿÿ
 E
-java:S6212b"/Declare this local variable with "var" instead.(À€¯Ú
-E
-java:S6212g"/Declare this local variable with "var" instead.(§¾˜
+java:S6212a"/Declare this local variable with "var" instead.(À€¯Ú
 D
 java:S6212n"/Declare this local variable with "var" instead.(ñüñ
 E

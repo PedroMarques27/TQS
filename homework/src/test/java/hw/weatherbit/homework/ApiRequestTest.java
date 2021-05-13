@@ -3,6 +3,9 @@ package hw.weatherbit.homework;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.internal.bytebuddy.matcher.ElementMatchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ApiRequestTest {
@@ -15,7 +18,7 @@ class ApiRequestTest {
         apiRequest.setTimeOut(500);
 
         Thread.sleep(200);
-        assertTrue(apiRequest.isValid());
+        assertThat(apiRequest.isValid(), equalTo(true));
     }
 
     @Test
@@ -26,6 +29,6 @@ class ApiRequestTest {
         apiRequest.setTimeOut(500);
 
         Thread.sleep(1000);
-        assertFalse(apiRequest.isValid());
+        assertThat(apiRequest.isValid(), equalTo(false));
     }
 }

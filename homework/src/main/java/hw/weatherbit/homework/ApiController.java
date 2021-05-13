@@ -1,24 +1,8 @@
 package hw.weatherbit.homework;
 
-import com.byteowls.jopencage.JOpenCageGeocoder;
-import com.byteowls.jopencage.model.JOpenCageForwardRequest;
-import com.byteowls.jopencage.model.JOpenCageLatLng;
-import com.byteowls.jopencage.model.JOpenCageResponse;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.common.base.Charsets;
-import com.google.common.io.CharSink;
-import com.google.common.io.FileWriteMode;
-import com.google.common.io.Files;
-import com.google.gson.Gson;
-import org.json.simple.parser.ParseException;
-import org.springframework.scheduling.annotation.Async;
-import org.springframework.scheduling.annotation.Scheduled;
 
-import java.io.File;
+import org.json.simple.parser.ParseException;
 import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -54,10 +38,12 @@ public class ApiController {
 
                 WeatherData data = new WeatherData();
                 if (cache.containsKey(c) && cache.get(c).isValid() ){
-
-                        data = cache.get(c).getData();
+                    ApiCallsMethods.usedCache++;
+                    data = cache.get(c).getData();
 
                 }else{
+
+                    weatherApiCalled++;
                     data = acm.callWeatherAPI(c);
                     cache.put(c,new ApiRequest(data));
                 }

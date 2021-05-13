@@ -1,8 +1,12 @@
 package hw.weatherbit.homework;
 
 public class LatLng {
-    private double latitude;
-    private double longitude;
+    private double latitude = 0.0;
+    private double longitude = 0.0;
+
+    public LatLng() {
+
+    }
 
     public double getLatitude() {
         return latitude;

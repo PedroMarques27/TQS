@@ -16,7 +16,6 @@ public class ApiRestController {
     ArrayList<Location> locHash = new ArrayList<>();
     ApiCallsMethods acm = new ApiCallsMethods();
 
-    private int usedCache = 0;
 
     @GetMapping("/api/v1/weather/location")
     public String getWeatherByLocation(@RequestParam Double lat,@RequestParam Double lng) throws IOException, ParseException {
@@ -24,14 +23,16 @@ public class ApiRestController {
             LatLng c = new LatLng(lat, lng);
 
             WeatherData data = new WeatherData();
+            ApiCallsMethods.geoApiCalled++;
             Location n = acm.callGeolocationAPIByLatLng(c);
 
 
             if (cache.containsKey(c.hashCode()) && cache.get(c.hashCode()).isValid() ){
-                usedCache++;
+                ApiCallsMethods.usedCache++;
                 data = cache.get(c.hashCode()).getData();
 
             }else{
+                ApiCallsMethods.weatherApiCalled++;
                 data = acm.callWeatherAPI(n);
                 cache.put(c.hashCode(),new ApiRequest(data));
                 locHash.add(n);
@@ -44,15 +45,17 @@ public class ApiRestController {
     @GetMapping("/api/v1/weather/address")
     public String getWeatherByAddress(@RequestParam String q) throws IOException, ParseException {
         Location current = acm.callGeolocationAPIByAddress(q);
+        ApiCallsMethods.geoApiCalled++;
         LatLng c = current.getLatLng();
 
         WeatherData data = new WeatherData();
 
         if (cache.containsKey(c.hashCode()) && cache.get(c.hashCode()).isValid() ){
-            usedCache++;
+            ApiCallsMethods.usedCache++;
             data = cache.get(c.hashCode()).getData();
 
         }else{
+            ApiCallsMethods.weatherApiCalled++;
             data = acm.callWeatherAPI(current);
             cache.put(c.hashCode(),new ApiRequest(data));
             locHash.add(current);
@@ -79,11 +82,11 @@ public class ApiRestController {
     @GetMapping("/api/v1/weather/statistics")
     public String getStatistics() throws IOException, ParseException {
         HashMap<String, Integer> map = new HashMap<>();
-        map.put("WeatherApiCalls", weatherApiCalled);
-        map.put("GeolocationApiCalls", geoApiCalled);
-        map.put("hits", apiHits);
-        map.put("misses", apiMisses);
-        map.put("cacheUsage", usedCache);
+        map.put("WeatherApiCalls", ApiCallsMethods.weatherApiCalled);
+        map.put("GeolocationApiCalls", ApiCallsMethods.geoApiCalled);
+        map.put("hits", ApiCallsMethods.apiHits);
+        map.put("misses", ApiCallsMethods.apiMisses);
+        map.put("cacheUsage", ApiCallsMethods.usedCache);
         return new Gson().toJson(map);
     }
 

@@ -1,6 +1,7 @@
-hw\weatherbit\homework\ApiRequestTest.class
-hw\weatherbit\homework\ApiCallsMethodsTest.class
+hw\weatherbit\homework\ApiRestTest$1.class
 hw\weatherbit\homework\ApiRestTest.class
-hw\weatherbit\homework\GetDataTestTest.class
 hw\weatherbit\homework\HomeworkApplicationTest.class
 hw\weatherbit\homework\LocationTest.class
+hw\weatherbit\homework\ApiRequestTest.class
+hw\weatherbit\homework\ApiCallsMethodsTest.class
+hw\weatherbit\homework\ApiControllerTest.class
