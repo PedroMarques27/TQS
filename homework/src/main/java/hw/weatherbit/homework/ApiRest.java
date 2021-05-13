@@ -58,7 +58,7 @@ public class ApiRest {
 
     }
 
-    @GetMapping("/api/v1/statistics")
+    @GetMapping("/api/v1/weather/statistics")
     public String getStatistics() throws IOException, ParseException {
         HashMap<String, Integer> map = new HashMap<>();
         map.put("WeatherApiCalls", weatherApiCalled);
