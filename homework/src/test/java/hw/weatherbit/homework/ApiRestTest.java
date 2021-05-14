@@ -16,6 +16,7 @@ import org.springframework.test.web.servlet.ResultActions;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -91,33 +92,11 @@ class ApiRestTest {
         assertThat(result,containsString("Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal"));
     }
 
+
+
+
     @Test
     @Order(4)
-    void getCachedData() throws IOException, ParseException {
-        restController.getWeatherByLocation(40.6446276, -8.6490691);
-        restController.getWeatherByLocation(42.6446276, -8.9490691);
-
-        String data = restController.getCachedData();
-        assertThat(data, containsString("Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal"));
-        assertThat(data, containsString("15948 Petón do Currumil, Espanha"));
-
-    }
-    @Test
-    @Order(5)
-    void cacheDoesntAddIfExisting() throws IOException, ParseException, InterruptedException {
-
-        restController.getWeatherByLocation(40.6446276, -8.6490691);
-        restController.getWeatherByLocation(42.6446276, -8.9490691);
-        restController.getWeatherByLocation(42.6446276, -8.9490691);
-
-
-       assertThat(acm.cache.keySet().size(), equalTo(2));
-
-    }
-
-
-    @Test
-    @Order(7)
     void addedToLocations() throws IOException, ParseException {
         restController.getWeatherByLocation(point2.getLatitude(), point2.getLongitude());
         restController.getWeatherByAddress("Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal");
@@ -132,7 +111,43 @@ class ApiRestTest {
     }
 
     @Test
+    @Order(5)
+    void addedToCities() throws IOException, ParseException {
+        restController.getWeatherByAddress("Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal");
+        assertThat(ApiCallsMethods.cities, hasItems("Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal"));
+
+    }
+
+
+    @Test
     @Order(6)
+    void getWeatherCachedData() throws IOException, ParseException {
+        restController.getWeatherByLocation(40.6446276, -8.6490691);
+        restController.getWeatherByLocation(42.6446276, -8.9490691);
+
+        String data = restController.getCachedData();
+        assertThat(data, containsString("Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal"));
+        assertThat(data, containsString("15948 Petón do Currumil, Espanha"));
+
+    }
+
+
+
+    @Test
+    @Order(7)
+    void cacheDoesntAddIfExisting() throws IOException, ParseException, InterruptedException {
+
+        restController.getWeatherByLocation(40.6446276, -8.6490691);
+        restController.getWeatherByLocation(42.6446276, -8.9490691);
+        restController.getWeatherByLocation(42.6446276, -8.9490691);
+
+
+        assertThat(acm.cache.keySet().size(), equalTo(2));
+
+    }
+
+    @Test
+    @Order(8)
     void cacheNotValidUpdate() throws IOException, ParseException, InterruptedException {
         acm.cache.clear();
         ApiRequest.TIME_OUT=5000;
@@ -146,11 +161,23 @@ class ApiRestTest {
         assertThat(acm.cache.get(city).isValid(), equalTo(false));
         restController.getWeatherByLocation(42.6446276, -8.9490691);
         assertThat(acm.cache.keySet().size(),equalTo(1));
-
         assertThat(acm.cache.get(city).isValid(), equalTo(true));
+    }
 
 
+    @Test
+    @Order(9)
+    void getGeoCachedData() throws IOException, ParseException {
+        ApiCallsMethods.locationCache= new HashMap<>();
+        System.out.println(ApiCallsMethods.locationCache);
+        restController.getWeatherByLocation(40.6446276, -8.6490691);
+        restController.getWeatherByLocation(42.6446276, -8.9490691);
+        System.out.println(ApiCallsMethods.locationCache);
+        restController.getWeatherByLocation(40.6446276, -8.6490691);
 
+        assertThat(ApiCallsMethods.locationCache.keySet(), hasItems("Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal"));
+        assertThat(ApiCallsMethods.locationCache.keySet(), hasItems("15948 Petón do Currumil, Espanha"));
+        assertThat(ApiCallsMethods.locationCache.size(), equalTo(2));
     }
 
     @Test

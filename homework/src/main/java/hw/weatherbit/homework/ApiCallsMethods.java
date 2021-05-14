@@ -91,7 +91,7 @@ public class ApiCallsMethods {
         String formattedAddress = response.getResults().get(0).getFormatted();
 
         Location finalLocation = new Location(latlng.getLatitude(), latlng.getLongitude(), formattedAddress);
-        locationCache.put(finalLocation.getCity(), finalLocation.getLatLng());
+        locationCache.put(finalLocation.getCity(), latlng);
         return finalLocation;
     }
 

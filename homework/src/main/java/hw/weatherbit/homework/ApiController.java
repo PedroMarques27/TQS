@@ -68,7 +68,12 @@ public class ApiController {
         }
         acm.addLog("Loading Web Page With data For Location "+redSoc);
         model.addAttribute("weather", data);
-        model.addAttribute("apicalls", weatherApiCalled);
+        model.addAttribute("WeatherApiCalls", ApiCallsMethods.weatherApiCalled);
+        model.addAttribute("GeolocationApiCalls", ApiCallsMethods.geoApiCalled);
+        model.addAttribute("hits", ApiCallsMethods.apiHits);
+        model.addAttribute("misses", ApiCallsMethods.apiMisses);
+        model.addAttribute("weatherCacheUsage", ApiCallsMethods.usedCache);
+        model.addAttribute("geolocatorCacheUsage", ApiCallsMethods.geoCache);
         return "weather.html";
 
 

@@ -29,10 +29,10 @@ public class ApiRestController {
                     ApiCallsMethods.geoCache++;
                     break;
                 }
-
-
-            if (n==null)
+            if (n==null){
                 n = acm.callGeolocationAPIByLatLng(c);
+            }
+
 
 
 
