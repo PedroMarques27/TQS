@@ -13,10 +13,18 @@ class LocationTest {
     }
 
     @Test
-    void getLatLng() {
+    void getLat() {
         Assertions.assertThrows(NullPointerException.class,
                 ()->{
-                    noData.getLatLng();
+                    noData.getLatitude();
+                }
+        );
+    }
+    @Test
+    void getLng() {
+        Assertions.assertThrows(NullPointerException.class,
+                ()->{
+                    noData.getLongitude();
                 }
         );
     }

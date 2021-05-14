@@ -57,13 +57,8 @@
 <body>
 <div>
     <div class="container">
-        <form th:action="${'/'}" th:method="POST">
-            <select name="redSoc">
-                <option th:each="city : *{locations}"
-                        th:value="${city.city}"
-                        th:text="${city.city}">
-                </option>
-            </select>
+        <form th:action="${'/'}"  th:method="POST">
+            <input type="text"   name="city" >Address</input>
             <input type="submit">Register</input>
         </form>
         <span id="apiCalls">API Called <a th:text="${apicalls}"></a> times</span>
@@ -78,7 +73,7 @@
 <div class="container-fluid px-1 px-md-4 py-5 mx-auto" th:if="${selected != false}">
     <div class="row d-flex justify-content-center px-3">
         <div class="card">
-            <h2 class="ml-auto mr-4 mt-3 mb-0" ><a th:text="${weather.name}"></a>, <a th:text="${selected}"></a></h2>
+            <h2 class="ml-auto mr-4 mt-3 mb-0" ><a th:text="${weather.name}"></a>, <a th:text="${weather.location}"></a></h2>
             <h4 class="ml-auto mr-4 mt-3 mb-0" ></h4>
 
             <p class="ml-auto mr-4 mb-0 sm-font" th:text="${weather.weather[0].toString}"></p>

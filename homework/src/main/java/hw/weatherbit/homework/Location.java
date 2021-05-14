@@ -17,6 +17,8 @@ public class Location {
     }
 
     public Location(String name, LatLng latLng) {
+        this.city = name;
+        this.coordinates = latLng;
     }
 
     public LatLng getLatLng(){

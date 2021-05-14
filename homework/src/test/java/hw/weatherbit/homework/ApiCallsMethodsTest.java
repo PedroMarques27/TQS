@@ -3,6 +3,7 @@ package hw.weatherbit.homework;
 import com.google.gson.Gson;
 import org.json.simple.parser.ParseException;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -11,6 +12,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import java.io.IOException;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.anyDouble;
@@ -28,16 +30,15 @@ class ApiCallsMethodsTest {
 
     LatLng point1 = new LatLng(40.6446276, -8.6490691);
     LatLng point2 = new LatLng(42.6446276, -8.9490691);
-
+    Location _temp  = new Location(40.6446276, -8.6490691, "Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal");
+    Location _temp2 = new Location(42.6446276, -8.9490691, "15948 Petón do Currumil, Espanha");
 
     @BeforeEach
     void setUp() throws IOException, ParseException {
         WeatherData dt = new Gson().fromJson(weatherExample,WeatherData.class);
         WeatherData dt2 = new Gson().fromJson(weatherExample2,WeatherData.class);
-
-        Location _temp = new Location(40.6446276, -8.6490691, "Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal");
-        Location _temp2 = new Location(42.6446276, -8.9490691, "15948 Petón do Currumil, Espanha");
-
+        dt.location = "Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal";
+        dt2.location = "15948 Petón do Currumil, Espanha";
 
         when(acm.callWeatherAPI(_temp)).thenReturn(dt);
         when(acm.callGeolocationAPIByLatLng(point1)).thenReturn(_temp);
@@ -51,11 +52,12 @@ class ApiCallsMethodsTest {
 
     @Test
     void callWeatherAPI() throws IOException, ParseException {
-        WeatherData data = acm.callWeatherAPI(new Location(40.6446276, -8.6490691, "Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal"));
+        WeatherData data = acm.callWeatherAPI(_temp);
         assertThat(data.location,equalTo("Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal") );
 
 
     }
+
 
 
 

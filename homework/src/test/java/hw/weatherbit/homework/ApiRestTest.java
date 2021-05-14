@@ -15,20 +15,12 @@ import org.springframework.test.web.servlet.ResultActions;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.Map;
 
-import static hw.weatherbit.homework.ApiCallsMethods.*;
-import static hw.weatherbit.homework.ApiCallsMethods.apiMisses;
-import static org.assertj.core.internal.bytebuddy.matcher.ElementMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.containsString;
-import static org.hamcrest.Matchers.equalTo;
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.*;
+import static org.hamcrest.Matchers.*;
 import static org.mockito.Mockito.when;
-import static org.springframework.mock.http.server.reactive.MockServerHttpRequest.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 
 class ApiRestTest {
     private MockMvc mockMvc;
@@ -82,6 +74,7 @@ class ApiRestTest {
         ApiCallsMethods.apiHits = 0;
         ApiCallsMethods.apiMisses = 0;
         ApiCallsMethods.usedCache = 0;
+        ApiCallsMethods.geoCache=0;
     }
 
     @Test
@@ -112,32 +105,49 @@ class ApiRestTest {
     @Test
     @Order(5)
     void cacheDoesntAddIfExisting() throws IOException, ParseException, InterruptedException {
-        restController.cache.clear();
+
         restController.getWeatherByLocation(40.6446276, -8.6490691);
         restController.getWeatherByLocation(42.6446276, -8.9490691);
         restController.getWeatherByLocation(42.6446276, -8.9490691);
 
 
-       assertThat(restController.cache.keySet().size(), equalTo(2));
+       assertThat(acm.cache.keySet().size(), equalTo(2));
 
     }
+
+
+    @Test
+    @Order(7)
+    void addedToLocations() throws IOException, ParseException {
+        restController.getWeatherByLocation(point2.getLatitude(), point2.getLongitude());
+        restController.getWeatherByAddress("Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal");
+
+        ArrayList<String> cities = new ArrayList<>();
+        for (Location l: ApiCallsMethods.locations) {
+            System.out.println(l.getCity());
+            cities.add(l.getCity());
+        }
+        assertThat(cities, hasItems("15948 Petón do Currumil, Espanha","Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal"));
+
+    }
+
     @Test
     @Order(6)
     void cacheNotValidUpdate() throws IOException, ParseException, InterruptedException {
-        restController.cache.clear();
+        acm.cache.clear();
         ApiRequest.TIME_OUT=5000;
         restController.getWeatherByLocation(42.6446276, -8.9490691);
-        assertThat(restController.cache.keySet().size(),equalTo(1));
-        int code = (int) restController.cache.keySet().toArray()[0];
-        assertThat(restController.cache.get(code).isValid(), equalTo(true));
+        assertThat(acm.cache.keySet().size(),equalTo(1));
+        String city = (String) acm.cache.keySet().toArray()[0];
+        assertThat(acm.cache.get(city).isValid(), equalTo(true));
 
 
         Thread.sleep(6000);
-        assertThat(restController.cache.get(code).isValid(), equalTo(false));
+        assertThat(acm.cache.get(city).isValid(), equalTo(false));
         restController.getWeatherByLocation(42.6446276, -8.9490691);
-        assertThat(restController.cache.keySet().size(),equalTo(1));
+        assertThat(acm.cache.keySet().size(),equalTo(1));
 
-        assertThat(restController.cache.get(code).isValid(), equalTo(true));
+        assertThat(acm.cache.get(city).isValid(), equalTo(true));
 
 
 
@@ -146,6 +156,10 @@ class ApiRestTest {
     @Test
     @Order(1)
     void getStatistics() throws IOException, ParseException {
+        ApiCallsMethods.cache.clear();
+        ApiCallsMethods.locationCache.clear();
+
+
         restController.getWeatherByLocation(40.6446276, -8.6490691);
         restController.getWeatherByLocation(42.6446276, -8.9490691);
         restController.getWeatherByLocation(40.6446276, -8.6490691);
@@ -155,9 +169,10 @@ class ApiRestTest {
         Map<String, Integer> statistics = new Gson().fromJson(dataJson, type);
 
         assertThat(statistics.get("hits"), equalTo(2));
-        assertThat(statistics.get("GeolocationApiCalls"), equalTo(3));
+        assertThat(statistics.get("GeolocationApiCalls"), equalTo(2));
         assertThat(statistics.get("WeatherApiCalls"), equalTo(2));
-        assertThat(statistics.get("cacheUsage"), equalTo(1));
+        assertThat(statistics.get("weatherCacheUsage"), equalTo(1));
+        assertThat(statistics.get("geolocatorCacheUsage"), equalTo(1));
         assertThat(statistics.get("misses"), equalTo(0));
 
     }

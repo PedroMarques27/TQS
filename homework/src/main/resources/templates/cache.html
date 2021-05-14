@@ -55,33 +55,21 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
-<div>
-    <div class="container">
-        <form th:action="${'/'}"  th:method="POST">
-            <input type="text"   name="city" >Address</input>
-            <input type="submit">Register</input>
-        </form>
-        <span id="apiCalls">API Called <a th:text="${apicalls}"></a> times</span>
-    </div>
 
+<div class="container-fluid px-1 px-md-4 py-5 mx-auto" th:each="entry : ${data}">
 
-
-
-
-
-</div>
-<div class="container-fluid px-1 px-md-4 py-5 mx-auto" th:if="${selected != false}">
     <div class="row d-flex justify-content-center px-3">
         <div class="card">
-            <h2 class="ml-auto mr-4 mt-3 mb-0" ><a th:text="${weather.name}"></a>, <a th:text="${weather.location}"></a></h2>
+            <span>Is Valid: <a th:text="${entry.value}"></a></span>
+            <h2 class="ml-auto mr-4 mt-3 mb-0" ><a th:text="${entry.key.location}"></a></h2>
             <h4 class="ml-auto mr-4 mt-3 mb-0" ></h4>
 
-            <p class="ml-auto mr-4 mb-0 sm-font" th:text="${weather.weather[0].toString}"></p>
+            <p class="ml-auto mr-4 mb-0 sm-font" th:text="${entry.key.weather[0].toString}"></p>
 
 
-            <p class="time-font mb-0 ml-4 mt-auto " th:text="${weather.main.temperature}" ></p>
-            <p class="ml-4 mb-4" th:text="${weather.main.temperatureData}"></p>
-            <p class="ml-4 mb-4" th:text="${weather.main.moreData}"></p>
+            <p class="time-font mb-0 ml-4 mt-auto " th:text="${entry.key.main.temperature}" ></p>
+            <p class="ml-4 mb-4" th:text="${entry.key.main.temperatureData}"></p>
+            <p class="ml-4 mb-4" th:text="${entry.key.main.moreData}"></p>
         </div>
     </div>
 </div>

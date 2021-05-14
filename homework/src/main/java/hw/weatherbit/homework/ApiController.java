@@ -16,47 +16,62 @@ import static hw.weatherbit.homework.ApiCallsMethods.weatherApiCalled;
 @Controller
 @RequestMapping("/")
 public class ApiController {
-    ArrayList<Location> locations = Location.getLocations();
-    HashMap<Location, ApiRequest> cache = new HashMap<>();
+
     ApiCallsMethods acm = new ApiCallsMethods();
 
     private static final String GEO_API_KEY = "04d52af6c36e4f2bbf04224f96cfcbcc";
     @GetMapping("/")
     public String getWelcome(Model model) throws IOException {
-        model.addAttribute("locations", locations);
         model.addAttribute("selected", false);
         model.addAttribute("apicalls", weatherApiCalled);
         acm.addLog("Loading Web Page");
         return "weather.html";
     }
+    @GetMapping("/cache")
+    public String getCache(Model model) throws IOException {
+        HashMap< WeatherData,String> data = new HashMap<>();
+
+
+        for (String c: ApiCallsMethods.cities){
+            ApiRequest d = ApiCallsMethods.cache.get(c);
+            data.put(d.getData(),String.valueOf(d.isValid()));
+        }
+        acm.addLog("Loading Cache Web Page");
+        model.addAttribute("data", data);
+        return "cache.html";
+    }
 
     @PostMapping("/")
-    public String postWelcome(@RequestParam(name = "redSoc") String redSoc, Model model) throws IOException, ParseException {
+    public String postWelcome(@RequestParam(name = "city") String redSoc, Model model) throws IOException, ParseException {
         acm.addLog("Getting Location Info For Location: "+redSoc);
-        for (Location c : locations){
-            if (c.getCity().equalsIgnoreCase(redSoc)){
-                model.addAttribute("locations", locations);
-                model.addAttribute("selected", redSoc);
-
-                WeatherData data = new WeatherData();
-                if (cache.containsKey(c) && cache.get(c).isValid() ){
-                    ApiCallsMethods.usedCache++;
-                    data = cache.get(c).getData();
-                    acm.addLog("Using Cached Data on Web Page For Location "+redSoc);
-                }else{
-
-                    weatherApiCalled++;
-                    data = acm.callWeatherAPI(c);
-                    cache.put(c,new ApiRequest(data));
-                    acm.addLog("Weather API Called on Web Controller");
-                }
-                acm.addLog("Loading Web Page With data For Location "+redSoc);
-                model.addAttribute("weather", data);
-                model.addAttribute("apicalls", weatherApiCalled);
-                return "weather.html";
-            }
+        Location c;
+        model.addAttribute("selected", true);
+        if (ApiCallsMethods.locationCache.containsKey(redSoc)){
+            c = new Location(redSoc, ApiCallsMethods.locationCache.get(redSoc));
+            ApiCallsMethods.geoCache++;
         }
-        return "";
+
+        else
+            c = acm.callGeolocationAPIByAddress(redSoc);
+
+        WeatherData data = new WeatherData();
+        if (ApiCallsMethods.cache.containsKey(redSoc) && ApiCallsMethods.cache.get(redSoc).isValid() ){
+            ApiCallsMethods.usedCache++;
+            data = ApiCallsMethods.cache.get(c.getCity()).getData();
+            acm.addLog("Using Cached Data on Web Page For Location "+redSoc);
+        }else{
+            data = acm.callWeatherAPI(c);
+            ApiCallsMethods.cache.put(c.getCity(),new ApiRequest(data));
+            if (!ApiCallsMethods.cities.contains(redSoc))
+                ApiCallsMethods.cities.add(redSoc);
+            acm.addLog("Weather API Called on Web Controller");
+        }
+        acm.addLog("Loading Web Page With data For Location "+redSoc);
+        model.addAttribute("weather", data);
+        model.addAttribute("apicalls", weatherApiCalled);
+        return "weather.html";
+
+
     }
 
 

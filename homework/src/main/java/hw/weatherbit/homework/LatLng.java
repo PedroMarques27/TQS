@@ -1,8 +1,8 @@
 package hw.weatherbit.homework;
 
 public class LatLng {
-    private double latitude = 0.0;
-    private double longitude = 0.0;
+    private Double latitude;
+    private Double longitude;
 
     public LatLng() {
 
@@ -18,6 +18,7 @@ public class LatLng {
     }
 
     public double getLongitude() {
+
         return longitude;
     }
 
@@ -34,8 +35,8 @@ public class LatLng {
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 31 * hash + (int) latitude;
-        hash = 31 * hash + (int) longitude;
+        hash = 31 * hash + latitude.intValue();
+        hash = 31 * hash + longitude.intValue();
         return hash;
     }
 }

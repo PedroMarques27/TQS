@@ -1,8 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: hw.weatherbit.homework.ApiRestTest
 -------------------------------------------------------------------------------
-Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 4.945 s <<< FAILURE! - in hw.weatherbit.homework.ApiRestTest
-getWeatherByAddress  Time elapsed: 1.84 s  <<< ERROR!
-java.lang.NullPointerException
-	at hw.weatherbit.homework.ApiRestTest.getWeatherByAddress(ApiRestTest.java:97)
-
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 26.177 s - in hw.weatherbit.homework.ApiRestTest
