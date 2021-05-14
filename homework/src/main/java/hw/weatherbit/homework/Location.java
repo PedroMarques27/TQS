@@ -1,6 +1,7 @@
 package hw.weatherbit.homework;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Location {
     private LatLng coordinates = new LatLng();
@@ -53,12 +54,12 @@ public class Location {
         this.city = city;
     }
 
-    public static ArrayList<Location> getLocations(){
+    public static List<Location> getLocations(){
         ArrayList<Location> temp = new ArrayList<>();
-        Location l = new Location(51.5074, 0.1278,"London");
-        Location lisbon = new Location(38.7223, 9.1393, "Lisbon");
-        Location budapest = new Location(47.4979, 19.0402,"Budapest");
-        Location paris = new Location(48.8566, 2.3522,"Paris");
+        var l = new Location(51.5074, 0.1278,"London");
+        var lisbon = new Location(38.7223, 9.1393, "Lisbon");
+        var budapest = new Location(47.4979, 19.0402,"Budapest");
+        var paris = new Location(48.8566, 2.3522,"Paris");
         temp.add(l);
         temp.add(lisbon);
         temp.add(budapest);

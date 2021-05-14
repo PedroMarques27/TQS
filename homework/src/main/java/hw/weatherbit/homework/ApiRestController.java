@@ -19,7 +19,7 @@ public class ApiRestController {
     @GetMapping("/api/v1/weather/location")
     public String getWeatherByLocation(@RequestParam Double lat,@RequestParam Double lng) throws IOException, ParseException {
             acm.addLog("Using REST API To Get Weather By Coordinates");
-            LatLng c = new LatLng(lat, lng);
+            var c = new LatLng(lat, lng);
 
             WeatherData data;
             Location n = null;

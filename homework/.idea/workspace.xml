@@ -5,7 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae8180bc-7f0a-4084-acdd-f1f348b7b508" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/c/5c1a9de9597bfc97569f3250ecc0185b545dded3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/a/6ad63c2f9cc6d7c7a8244c5bb9237e90c1589c63" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/9/79beaf233ed831b5577f25be68a726c30d96abd7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/4/848b22d8ee9748acd0bc79c52db5e599384c10f3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/9/89cf25075c1ef8841ed15857e527ad3458cd1adb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/0/a0d0fe6c5792db0f5213877751603f4a985b22eb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/9/a97922b875ff8c760314497cf4b945ec3b6e7487" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/c/ac2090956514ea82da4f36cdb154b6620bb37a61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/d/ad1e48486e919e81c6f71ad17382d50abe256e84" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/3/b332397f367ad3bb1ba9b15976dc23215b6638c4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c37dc5878dcafba48839861a675d61c2c4a013f7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/3/c3f9941da4028f5b79d68ad0a84ede94c2289d3b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c54af7a645e088ad9537f893c628fd13aa92fe49" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/3/f38a6cba038f3739e3fdd90c70a66a3bb3ad12e5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiCallsMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiCallsMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/LatLng.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/LatLng.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/ApiCallsMethodsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/ApiCallsMethodsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/ApiRequestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/ApiRequestTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/ApiRestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/ApiRestTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/HomeworkApplicationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/weather.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/weather.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/hw/weatherbit/homework/ApiCallsMethodsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/hw/weatherbit/homework/ApiCallsMethodsTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/hw/weatherbit/homework/ApiRequestTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/hw/weatherbit/homework/ApiRequestTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/hw/weatherbit/homework/ApiRestTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/hw/weatherbit/homework/ApiRestTest$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/hw/weatherbit/homework/ApiRestTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/hw/weatherbit/homework/ApiRestTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,19 +119,21 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.WebControllerSeleniumTest">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ApiRestTest.cacheNotValidUpdate">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApiRestTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ApiRestTest.addedToCities" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework" />
       <extension name="coverage">
         <pattern>
@@ -110,7 +143,24 @@
       </extension>
       <option name="PACKAGE_NAME" value="hw.weatherbit.homework" />
       <option name="MAIN_CLASS_NAME" value="hw.weatherbit.homework.ApiRestTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="addedToCities" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiRestTest.addedToLocations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hw.weatherbit.homework.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="hw.weatherbit.homework" />
+      <option name="MAIN_CLASS_NAME" value="hw.weatherbit.homework.ApiRestTest" />
+      <option name="METHOD_NAME" value="addedToLocations" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -131,7 +181,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApiRestTest.getGeoCachedData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ApiRestTest.getWeatherByAddress" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework" />
       <extension name="coverage">
         <pattern>
@@ -141,13 +191,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="hw.weatherbit.homework" />
       <option name="MAIN_CLASS_NAME" value="hw.weatherbit.homework.ApiRestTest" />
-      <option name="METHOD_NAME" value="getGeoCachedData" />
+      <option name="METHOD_NAME" value="getWeatherByAddress" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WebControllerSeleniumTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ApiRestTest.getWeatherCachedData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework" />
       <extension name="coverage">
         <pattern>
@@ -156,23 +206,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="hw.weatherbit.homework" />
-      <option name="MAIN_CLASS_NAME" value="hw.weatherbit.homework.WebControllerSeleniumTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WebControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="homework" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hw.weatherbit.homework.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="hw.weatherbit.homework" />
-      <option name="MAIN_CLASS_NAME" value="hw.weatherbit.homework.WebControllerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="hw.weatherbit.homework.ApiRestTest" />
+      <option name="METHOD_NAME" value="getWeatherCachedData" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -193,11 +229,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WebControllerSeleniumTest" />
-        <item itemvalue="JUnit.WebControllerTest" />
-        <item itemvalue="JUnit.ApiRestTest.getGeoCachedData" />
-        <item itemvalue="JUnit.ApiRestTest" />
         <item itemvalue="JUnit.ApiRestTest.cacheNotValidUpdate" />
+        <item itemvalue="JUnit.ApiRestTest.getWeatherCachedData" />
+        <item itemvalue="JUnit.ApiRestTest.addedToCities" />
+        <item itemvalue="JUnit.ApiRestTest.addedToLocations" />
+        <item itemvalue="JUnit.ApiRestTest.getWeatherByAddress" />
       </list>
     </recent_temporary>
   </component>
@@ -224,6 +260,7 @@
       <workItem from="1620930630410" duration="1944000" />
       <workItem from="1620934903478" duration="2380000" />
       <workItem from="1620984319320" duration="12633000" />
+      <workItem from="1621001731744" duration="2973000" />
     </task>
     <servers />
   </component>

@@ -32,11 +32,5 @@ public class LatLng {
         this.latitude = latitude;
         this.longitude = longitude;
     }
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 31 * hash + latitude.intValue();
-        hash = 31 * hash + longitude.intValue();
-        return hash;
-    }
+
 }

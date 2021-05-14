@@ -5,18 +5,18 @@ import com.byteowls.jopencage.model.JOpenCageForwardRequest;
 import com.byteowls.jopencage.model.JOpenCageLatLng;
 import com.byteowls.jopencage.model.JOpenCageResponse;
 import com.byteowls.jopencage.model.JOpenCageReverseRequest;
-import com.google.common.base.Charsets;
-import com.google.common.io.CharSink;
 import com.google.common.io.FileWriteMode;
 import com.google.common.io.Files;
 import com.google.gson.Gson;
-import org.json.simple.parser.ParseException;
+import org.springframework.http.HttpStatus;
 import org.springframework.scheduling.annotation.Async;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.io.File;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -26,7 +26,7 @@ public class ApiCallsMethods {
 
     private static final String GEO_API_KEY = "04d52af6c36e4f2bbf04224f96cfcbcc";
 
-    public static ArrayList<Location> locations = Location.getLocations();
+    public static ArrayList<Location> locations = (ArrayList<Location>) Location.getLocations();
     public static ArrayList<String> cities = new ArrayList<>();
     public static HashMap<String, ApiRequest> cache = new HashMap<>();
     public static HashMap<String, LatLng> locationCache = new HashMap<>();
@@ -38,13 +38,13 @@ public class ApiCallsMethods {
     public static int geoCache = 0;
 
     @Async
-    public WeatherData callWeatherAPI(Location city) throws IOException, ParseException {
+    public WeatherData callWeatherAPI(Location city) throws IOException {
         ApiCallsMethods.weatherApiCalled++;
         String location = city.getCity();
-        String url_str = String.format("http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&appid=%s",
+        var urlStr = String.format("http://api.openweathermap.org/data/2.5/weather?lat=%f&lon=%f&appid=%s",
                 city.getLatitude(), city.getLongitude(), API_KEY);
         addLog(String.format("Called Weather API For Location %s (%.4f,%.4g)",city.getCity(),city.getLatitude(),city.getLongitude()));
-        URL url = new URL(url_str);
+        var url = new URL(urlStr);
         //Make GET Request
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
@@ -54,18 +54,19 @@ public class ApiCallsMethods {
 
         if (responsecode != 200) {
             apiMisses++;
-            throw new RuntimeException("HttpResponseCode: " + responsecode);
+            throw new ResponseStatusException(
+                    HttpStatus.BAD_REQUEST, "API is Not Available");
         } else {
             apiHits++;
-            String inline = "";
-            Scanner scanner = new Scanner(url.openStream());
+            var inline = "";
+            var scanner = new Scanner(url.openStream());
 
             while (scanner.hasNext()) {
                 inline += scanner.nextLine();
             }
             scanner.close();
 
-            Gson gson = new Gson();
+            var gson = new Gson();
             WeatherData wd = gson.fromJson(inline,WeatherData.class);
 
             wd.location = location;
@@ -79,9 +80,9 @@ public class ApiCallsMethods {
 
         ApiCallsMethods.geoApiCalled++;
         addLog("Calling jOpenCageGeocoder: Coordinates to Address");
-        JOpenCageGeocoder jOpenCageGeocoder = new JOpenCageGeocoder(GEO_API_KEY);
+        var jOpenCageGeocoder = new JOpenCageGeocoder(GEO_API_KEY);
 
-        JOpenCageReverseRequest request = new JOpenCageReverseRequest(latlng.getLatitude(), latlng.getLongitude());
+        var request = new JOpenCageReverseRequest(latlng.getLatitude(), latlng.getLongitude());
         request.setLanguage("pt");
         request.setNoDedupe(true);
         request.setLimit(5);
@@ -90,28 +91,28 @@ public class ApiCallsMethods {
         JOpenCageResponse response = jOpenCageGeocoder.reverse(request);
         String formattedAddress = response.getResults().get(0).getFormatted();
 
-        Location finalLocation = new Location(latlng.getLatitude(), latlng.getLongitude(), formattedAddress);
+        var finalLocation = new Location(latlng.getLatitude(), latlng.getLongitude(), formattedAddress);
         locationCache.put(finalLocation.getCity(), latlng);
         return finalLocation;
     }
 
     @Async
-    public Location callGeolocationAPIByAddress(String name) throws IOException, ParseException {
+    public Location callGeolocationAPIByAddress(String name) throws IOException {
         ApiCallsMethods.geoApiCalled++;
         addLog("Called jOpenCageGeocoder: Address to Coordinates");
-        String url_str = String.format("https://api.opencagedata.com/geocode/v1/json?q=%s&key=%s&pretty=1",
+        var urlStr = String.format("https://api.opencagedata.com/geocode/v1/json?q=%s&key=%s&pretty=1",
                 name, GEO_API_KEY);
 
-        URL url = new URL(url_str);
-        Location finalLocation = new Location();
+        var url = new URL(urlStr);
+        var finalLocation = new Location();
         finalLocation.setCity(name);
         //Make GET Request
         HttpURLConnection conn = (HttpURLConnection) url.openConnection();
         conn.setRequestMethod("GET");
         conn.connect();
 
-        JOpenCageGeocoder jOpenCageGeocoder = new JOpenCageGeocoder(GEO_API_KEY);
-        JOpenCageForwardRequest request = new JOpenCageForwardRequest(name);
+        var jOpenCageGeocoder = new JOpenCageGeocoder(GEO_API_KEY);
+        var request = new JOpenCageForwardRequest(name);
 
         JOpenCageResponse response = jOpenCageGeocoder.forward(request);
 
@@ -124,9 +125,9 @@ public class ApiCallsMethods {
     }
 
     public void addLog(String logData) throws IOException {
-        File file = new File("log.txt");
-        CharSink chs = Files.asCharSink(
-                file, Charsets.UTF_8, FileWriteMode.APPEND);
+        var file = new File("log.txt");
+        var chs = Files.asCharSink(
+                file, StandardCharsets.UTF_8, FileWriteMode.APPEND);
         chs.write(System.currentTimeMillis()+": "+logData+"\n");
     }
 }

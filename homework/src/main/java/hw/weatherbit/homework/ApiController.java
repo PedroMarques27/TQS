@@ -3,7 +3,6 @@ package hw.weatherbit.homework;
 
 import org.json.simple.parser.ParseException;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 
 import org.springframework.stereotype.Controller;
@@ -19,7 +18,6 @@ public class ApiController {
 
     ApiCallsMethods acm = new ApiCallsMethods();
 
-    private static final String GEO_API_KEY = "04d52af6c36e4f2bbf04224f96cfcbcc";
     @GetMapping("/")
     public String getWelcome(Model model) throws IOException {
         model.addAttribute("selected", false);
@@ -54,7 +52,7 @@ public class ApiController {
         else
             c = acm.callGeolocationAPIByAddress(redSoc);
 
-        WeatherData data = new WeatherData();
+        WeatherData data;
         if (ApiCallsMethods.cache.containsKey(redSoc) && ApiCallsMethods.cache.get(redSoc).isValid() ){
             ApiCallsMethods.usedCache++;
             data = ApiCallsMethods.cache.get(c.getCity()).getData();

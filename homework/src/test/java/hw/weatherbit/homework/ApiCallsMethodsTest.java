@@ -35,6 +35,7 @@ class ApiCallsMethodsTest {
 
     @BeforeEach
     void setUp() throws IOException, ParseException {
+
         WeatherData dt = new Gson().fromJson(weatherExample,WeatherData.class);
         WeatherData dt2 = new Gson().fromJson(weatherExample2,WeatherData.class);
         dt.location = "Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal";
@@ -53,6 +54,7 @@ class ApiCallsMethodsTest {
     @Test
     void callWeatherAPI() throws IOException, ParseException {
         WeatherData data = acm.callWeatherAPI(_temp);
+
         assertThat(data.location,equalTo("Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal") );
 
 
