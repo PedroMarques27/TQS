@@ -2,7 +2,6 @@ package hw.weatherbit.homework;
 
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
-import org.awaitility.Awaitility;
 import org.json.simple.parser.ParseException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Order;
@@ -11,25 +10,17 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
-import org.springframework.test.web.servlet.RequestBuilder;
-import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
-import java.time.Duration;
-import java.time.temporal.TemporalUnit;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.TimeUnit;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.awaitility.Awaitility.await;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -50,7 +41,7 @@ class ApiRestTest {
     LatLng point2 = new LatLng(42.6446276,-8.9490691);
 
     @BeforeEach
-    void setUp() throws IOException, ParseException {
+    void setUp() throws IOException {
         ApiRequest.TIME_OUT = 120000;
         WeatherData dt = new Gson().fromJson(weatherExample,WeatherData.class);
         restController = new ApiRestController();
@@ -72,7 +63,7 @@ class ApiRestTest {
         WeatherData dt2 = new Gson().fromJson(weatherExample2,WeatherData.class);
 
         when(acm.callWeatherAPI(new Location(42.6446276,-8.9490691, "15948 Petón do Currumil, Espanha"))).thenReturn(
-                dt
+                dt2
         );
 
         when(acm.callGeolocationAPIByLatLng(point2)).thenReturn(
@@ -99,9 +90,7 @@ class ApiRestTest {
                 .perform(get("/api/v1/weather/location").param("lat", String.valueOf(40.6446276)).param("lng","-8.6490691"))
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString("Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal")));
-
     }
-
     @Test
     @Order(3)
     void getWeatherByAddress() throws Exception {
@@ -118,7 +107,6 @@ class ApiRestTest {
     @Test
     @Order(4)
     void addedToLocations() throws Exception {
-        restController.getWeatherByLocation(point2.getLatitude(), point2.getLongitude());
         mockMvc
                 .perform(get("/api/v1/weather/location").param("lat", String.valueOf(point2.getLatitude())).param("lng",String.valueOf(point2.getLongitude())))
                 .andExpect(status().isOk())
@@ -149,12 +137,74 @@ class ApiRestTest {
 
     }
 
+    @Test
+    @Order(7)
+    void cacheDoesntAddIfExisting() throws IOException, ParseException {
+
+        restController.getWeatherByLocation(40.6446276, -8.6490691);
+        restController.getWeatherByLocation(42.6446276, -8.9490691);
+        restController.getWeatherByLocation(42.6446276, -8.9490691);
+
+
+        assertThat(ApiCallsMethods.cache.keySet().size(), equalTo(2));
+
+    }
+
+    @Test
+    @Order(8)
+    void cacheNotValidUpdate() throws IOException, ParseException, InterruptedException {
+        ApiCallsMethods.cache.clear();
+
+
+        ApiRequest.TIME_OUT=4000;
+        restController.getWeatherByLocation(42.6446276, -8.9490691);
+        assertThat(ApiCallsMethods.cache.keySet().size(),equalTo(1));
+        String city = (String) ApiCallsMethods.cache.keySet().toArray()[0];
+        assertThat(ApiCallsMethods.cache.get(city).isValid(), equalTo(true));
+
+        Thread.sleep(5000);
+
+        assertThat(ApiCallsMethods.cache.get(city).isValid(), equalTo(false));
+        restController.getWeatherByLocation(42.6446276, -8.9490691);
+        assertThat(ApiCallsMethods.cache.keySet().size(),equalTo(1));
+        assertThat(ApiCallsMethods.cache.get(city).isValid(), equalTo(true));
+    }
+
+    @Test
+    @Order(9)
+    void getGeoCachedData() throws Exception {
+        ApiCallsMethods.locationCache= new HashMap<>();
+        mockMvc
+                .perform(get("/api/v1/weather/location").param("lat", String.valueOf(point1.getLatitude())).param("lng",String.valueOf(point1.getLongitude())))
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal")));
+        mockMvc
+                .perform(get("/api/v1/weather/location").param("lat", String.valueOf(point2.getLatitude())).param("lng",String.valueOf(point2.getLongitude())))
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("15948 Petón do Currumil, Espanha")));
+
+        mockMvc
+                .perform(get("/api/v1/weather/location").param("lat", String.valueOf(point1.getLatitude())).param("lng",String.valueOf(point1.getLongitude())))
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal")));
+
+
+        assertThat(ApiCallsMethods.locationCache.keySet(), hasItems("Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal"));
+        assertThat(ApiCallsMethods.locationCache.keySet(), hasItems("15948 Petón do Currumil, Espanha"));
+        assertThat(ApiCallsMethods.locationCache.size(), equalTo(2));
+    }
 
     @Test
     @Order(6)
     void getWeatherCachedData() throws Exception {
-        restController.getWeatherByLocation(40.6446276, -8.6490691);
-        restController.getWeatherByLocation(42.6446276, -8.9490691);
+        mockMvc
+                .perform(get("/api/v1/weather/location").param("lat", String.valueOf(point1.getLatitude())).param("lng",String.valueOf(point1.getLongitude())))
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal")));
+        mockMvc
+                .perform(get("/api/v1/weather/location").param("lat", String.valueOf(point2.getLatitude())).param("lng",String.valueOf(point2.getLongitude())))
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("15948 Petón do Currumil, Espanha")));
 
         mockMvc
                 .perform(get("/api/v1/weather/cache"))
@@ -163,67 +213,26 @@ class ApiRestTest {
                 .andExpect(content().string(containsString("15948 Petón do Currumil, Espanha")));
     }
 
-
-
-    @Test
-    @Order(7)
-    void cacheDoesntAddIfExisting() throws IOException, ParseException, InterruptedException {
-
-        restController.getWeatherByLocation(40.6446276, -8.6490691);
-        restController.getWeatherByLocation(42.6446276, -8.9490691);
-        restController.getWeatherByLocation(42.6446276, -8.9490691);
-
-
-        assertThat(acm.cache.keySet().size(), equalTo(2));
-
-    }
-
-    @Test
-    @Order(8)
-    void cacheNotValidUpdate() throws IOException, ParseException, InterruptedException {
-        acm.cache.clear();
-
-
-        ApiRequest.TIME_OUT=4000;
-        restController.getWeatherByLocation(42.6446276, -8.9490691);
-        assertThat(acm.cache.keySet().size(),equalTo(1));
-        String city = (String) acm.cache.keySet().toArray()[0];
-        assertThat(acm.cache.get(city).isValid(), equalTo(true));
-
-        Thread.sleep(5000);
-
-        assertThat(acm.cache.get(city).isValid(), equalTo(false));
-        restController.getWeatherByLocation(42.6446276, -8.9490691);
-        assertThat(acm.cache.keySet().size(),equalTo(1));
-        assertThat(acm.cache.get(city).isValid(), equalTo(true));
-    }
-
-
-    @Test
-    @Order(9)
-    void getGeoCachedData() throws IOException, ParseException {
-        ApiCallsMethods.locationCache= new HashMap<>();
-        System.out.println(ApiCallsMethods.locationCache);
-        restController.getWeatherByLocation(40.6446276, -8.6490691);
-        restController.getWeatherByLocation(42.6446276, -8.9490691);
-        System.out.println(ApiCallsMethods.locationCache);
-        restController.getWeatherByLocation(40.6446276, -8.6490691);
-
-        assertThat(ApiCallsMethods.locationCache.keySet(), hasItems("Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal"));
-        assertThat(ApiCallsMethods.locationCache.keySet(), hasItems("15948 Petón do Currumil, Espanha"));
-        assertThat(ApiCallsMethods.locationCache.size(), equalTo(2));
-    }
-
     @Test
     @Order(1)
-    void getStatistics() throws IOException, ParseException {
+    void getStatistics() throws Exception {
         ApiCallsMethods.cache.clear();
         ApiCallsMethods.locationCache.clear();
 
+        mockMvc
+                .perform(get("/api/v1/weather/location").param("lat", String.valueOf(point1.getLatitude())).param("lng",String.valueOf(point1.getLongitude())))
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal")));
+        mockMvc
+                .perform(get("/api/v1/weather/location").param("lat", String.valueOf(point2.getLatitude())).param("lng",String.valueOf(point2.getLongitude())))
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("15948 Petón do Currumil, Espanha")));
+        mockMvc
+                .perform(get("/api/v1/weather/location").param("lat", String.valueOf(point1.getLatitude())).param("lng",String.valueOf(point1.getLongitude())))
+                .andExpect(status().isOk())
+                .andExpect(content().string(containsString("Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal")));
 
-        restController.getWeatherByLocation(40.6446276, -8.6490691);
-        restController.getWeatherByLocation(42.6446276, -8.9490691);
-        restController.getWeatherByLocation(40.6446276, -8.6490691);
+
 
         String dataJson = restController.getStatistics();
         Type type = new TypeToken<Map<String, Integer>>(){}.getType();

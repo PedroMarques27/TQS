@@ -3,24 +3,16 @@ package hw.weatherbit.homework;
 import com.google.gson.Gson;
 import org.json.simple.parser.ParseException;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.springframework.test.web.servlet.MockMvc;
-
 import java.io.IOException;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.equalTo;
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.anyDouble;
-import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
 class ApiCallsMethodsTest {
-    private MockMvc mockMvc;
 
     @Mock
     private ApiCallsMethods acm = Mockito.mock(ApiCallsMethods.class);
@@ -34,7 +26,7 @@ class ApiCallsMethodsTest {
     Location _temp2 = new Location(42.6446276, -8.9490691, "15948 Petón do Currumil, Espanha");
 
     @BeforeEach
-    void setUp() throws IOException, ParseException {
+    void setUp() throws IOException {
 
         WeatherData dt = new Gson().fromJson(weatherExample,WeatherData.class);
         WeatherData dt2 = new Gson().fromJson(weatherExample2,WeatherData.class);
@@ -52,7 +44,7 @@ class ApiCallsMethodsTest {
     }
 
     @Test
-    void callWeatherAPI() throws IOException, ParseException {
+    void callWeatherAPI() throws IOException {
         WeatherData data = acm.callWeatherAPI(_temp);
 
         assertThat(data.location,equalTo("Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal") );
@@ -64,14 +56,14 @@ class ApiCallsMethodsTest {
 
 
     @Test
-    void callGeolocationAPIByLatLng() throws IOException, ParseException {
+    void callGeolocationAPIByLatLng() throws IOException{
         Location data = acm.callGeolocationAPIByLatLng(point2);
         System.out.println(data.getLatitude());
         assertThat(data.getCity(), equalTo("15948 Petón do Currumil, Espanha"));
     }
 
     @Test
-    void callGeolocationAPIByAddress() throws IOException, ParseException {
+    void callGeolocationAPIByAddress() throws IOException {
         Location data = acm.callGeolocationAPIByAddress("15948 Petón do Currumil, Espanha");
         assertThat(data.getLatitude(), equalTo( 42.6446276));
         assertThat(data.getLongitude(), equalTo( -8.9490691));

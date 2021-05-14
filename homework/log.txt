@@ -1396,3 +1396,186 @@
 1621003866299: Using REST API To Get Weather By Coordinates
 1621003866308: Calling jOpenCageGeocoder: Coordinates to Address
 1621003866980: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621004971613: Using REST API To Get Weather By Address
+1621004971622: Called jOpenCageGeocoder: Address to Coordinates
+1621004973053: Called Weather API For Location Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal (40,6447,-8,649)
+1621004973349: Using REST API To Get Weather By Coordinates
+1621004973350: Calling jOpenCageGeocoder: Coordinates to Address
+1621004973626: Using REST API To Get Weather By Coordinates
+1621004973627: Calling jOpenCageGeocoder: Coordinates to Address
+1621004974057: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621004974247: Using REST API To Get Weather By Coordinates
+1621004974248: Calling jOpenCageGeocoder: Coordinates to Address
+1621004974529: Using REST API To Get Weather By Coordinates
+1621004974531: Using REST API To Get Weather By Address
+1621004974553: Using REST API To Get Weather By Coordinates
+1621004974554: Calling jOpenCageGeocoder: Coordinates to Address
+1621004974810: Called Weather API For Location Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal (40,6446,-8,649)
+1621004974970: Using REST API To Get Weather By Coordinates
+1621004974971: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621004975134: Using REST API To Get Weather By Coordinates
+1621004975135: Calling jOpenCageGeocoder: Coordinates to Address
+1621004975587: Using REST API To Get Statistics
+1621004975618: Using REST API To Get Weather By Coordinates
+1621004975619: Calling jOpenCageGeocoder: Coordinates to Address
+1621004975893: Using REST API To Get Weather By Coordinates
+1621004975894: Calling jOpenCageGeocoder: Coordinates to Address
+1621004976229: Using REST API To Get Weather By Coordinates
+1621004976230: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621004981401: Using REST API To Get Weather By Coordinates
+1621004981401: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621004981628: Using REST API To Get Weather By Coordinates
+1621004981629: Calling jOpenCageGeocoder: Coordinates to Address
+1621004981879: Called Weather API For Location Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal (40,6446,-8,649)
+1621004982048: Using REST API To Get Weather By Coordinates
+1621004982049: Using REST API To Get Weather By Coordinates
+1621004982063: Using REST API To Get Weather By Address
+1621005066820: Using REST API To Get Weather By Address
+1621005066829: Called jOpenCageGeocoder: Address to Coordinates
+1621005068243: Called Weather API For Location Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal (40,6447,-8,649)
+1621005068522: Using REST API To Get Weather By Coordinates
+1621005068523: Calling jOpenCageGeocoder: Coordinates to Address
+1621005068803: Using REST API To Get Weather By Coordinates
+1621005068803: Calling jOpenCageGeocoder: Coordinates to Address
+1621005069055: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621005069228: Using REST API To Get Weather By Coordinates
+1621005069229: Calling jOpenCageGeocoder: Coordinates to Address
+1621005069505: Using REST API To Get Weather By Coordinates
+1621005069508: Using REST API To Get Weather By Address
+1621005069529: Using REST API To Get Weather By Coordinates
+1621005069530: Calling jOpenCageGeocoder: Coordinates to Address
+1621005069991: Called Weather API For Location Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal (40,6446,-8,649)
+1621005070164: Using REST API To Get Weather By Coordinates
+1621005070164: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621005070324: Using REST API To Get Weather By Coordinates
+1621005070325: Calling jOpenCageGeocoder: Coordinates to Address
+1621005070766: Using REST API To Get Statistics
+1621005070797: Using REST API To Get Weather By Coordinates
+1621005070797: Calling jOpenCageGeocoder: Coordinates to Address
+1621005071057: Using REST API To Get Weather By Coordinates
+1621005071059: Using REST API To Get Cached Weather Data
+1621005071079: Using REST API To Get Weather By Coordinates
+1621005071080: Calling jOpenCageGeocoder: Coordinates to Address
+1621005071347: Using REST API To Get Weather By Coordinates
+1621005071347: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621005076516: Using REST API To Get Weather By Coordinates
+1621005076516: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621005076742: Using REST API To Get Weather By Coordinates
+1621005076743: Calling jOpenCageGeocoder: Coordinates to Address
+1621005077002: Called Weather API For Location Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal (40,6446,-8,649)
+1621005077173: Using REST API To Get Weather By Coordinates
+1621005077174: Using REST API To Get Weather By Coordinates
+1621005077187: Using REST API To Get Weather By Address
+1621005456566: Using REST API To Get Weather By Address
+1621005456575: Called jOpenCageGeocoder: Address to Coordinates
+1621005457922: Called Weather API For Location Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal (40,6447,-8,649)
+1621005458206: Using REST API To Get Weather By Coordinates
+1621005458207: Calling jOpenCageGeocoder: Coordinates to Address
+1621005458627: Using REST API To Get Weather By Coordinates
+1621005458627: Calling jOpenCageGeocoder: Coordinates to Address
+1621005458788: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621005458961: Using REST API To Get Weather By Coordinates
+1621005458961: Calling jOpenCageGeocoder: Coordinates to Address
+1621005459141: Using REST API To Get Weather By Coordinates
+1621005459144: Using REST API To Get Weather By Address
+1621005459166: Using REST API To Get Weather By Coordinates
+1621005459166: Calling jOpenCageGeocoder: Coordinates to Address
+1621005459489: Called Weather API For Location Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal (40,6446,-8,649)
+1621005459653: Using REST API To Get Weather By Coordinates
+1621005459654: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621005459827: Using REST API To Get Weather By Coordinates
+1621005459827: Calling jOpenCageGeocoder: Coordinates to Address
+1621005459993: Using REST API To Get Statistics
+1621005460052: Using REST API To Get Weather By Coordinates
+1621005460053: Calling jOpenCageGeocoder: Coordinates to Address
+1621005460494: Using REST API To Get Weather By Coordinates
+1621005460496: Using REST API To Get Cached Weather Data
+1621005460516: Using REST API To Get Weather By Coordinates
+1621005460516: Calling jOpenCageGeocoder: Coordinates to Address
+1621005460693: Using REST API To Get Weather By Coordinates
+1621005460694: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621005465861: Using REST API To Get Weather By Coordinates
+1621005465861: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621005466086: Using REST API To Get Weather By Coordinates
+1621005466087: Calling jOpenCageGeocoder: Coordinates to Address
+1621005466305: Called Weather API For Location Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal (40,6446,-8,649)
+1621005466469: Using REST API To Get Weather By Coordinates
+1621005466470: Using REST API To Get Weather By Coordinates
+1621005466483: Using REST API To Get Weather By Address
+1621006057485: Using REST API To Get Weather By Address
+1621006057494: Called jOpenCageGeocoder: Address to Coordinates
+1621006058738: Called Weather API For Location Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal (40,6447,-8,649)
+1621006059040: Using REST API To Get Weather By Coordinates
+1621006059040: Calling jOpenCageGeocoder: Coordinates to Address
+1621006059298: Using REST API To Get Weather By Coordinates
+1621006059298: Calling jOpenCageGeocoder: Coordinates to Address
+1621006059445: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621006059661: Using REST API To Get Weather By Coordinates
+1621006059661: Calling jOpenCageGeocoder: Coordinates to Address
+1621006060171: Using REST API To Get Weather By Coordinates
+1621006060174: Using REST API To Get Weather By Address
+1621006060197: Using REST API To Get Weather By Coordinates
+1621006060197: Calling jOpenCageGeocoder: Coordinates to Address
+1621006060359: Called Weather API For Location Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal (40,6446,-8,649)
+1621006060531: Using REST API To Get Weather By Coordinates
+1621006060532: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621006060696: Using REST API To Get Weather By Coordinates
+1621006060696: Calling jOpenCageGeocoder: Coordinates to Address
+1621006060939: Using REST API To Get Statistics
+1621006060968: Using REST API To Get Weather By Coordinates
+1621006060969: Calling jOpenCageGeocoder: Coordinates to Address
+1621006061119: Using REST API To Get Weather By Coordinates
+1621006061123: Using REST API To Get Cached Weather Data
+1621006061143: Using REST API To Get Weather By Coordinates
+1621006061144: Calling jOpenCageGeocoder: Coordinates to Address
+1621006061308: Using REST API To Get Weather By Coordinates
+1621006061309: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621006066466: Using REST API To Get Weather By Coordinates
+1621006066467: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621006066694: Using REST API To Get Weather By Coordinates
+1621006066694: Calling jOpenCageGeocoder: Coordinates to Address
+1621006066894: Called Weather API For Location Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal (40,6446,-8,649)
+1621006067049: Using REST API To Get Weather By Coordinates
+1621006067050: Using REST API To Get Weather By Coordinates
+1621006067067: Using REST API To Get Weather By Address
+1621006092731: Using REST API To Get Weather By Coordinates
+1621006092739: Calling jOpenCageGeocoder: Coordinates to Address
+1621006093413: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621006098663: Using REST API To Get Weather By Coordinates
+1621006098663: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621006750500: Using REST API To Get Weather By Address
+1621006750510: Called jOpenCageGeocoder: Address to Coordinates
+1621006751783: Called Weather API For Location Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal (40,6447,-8,649)
+1621006752157: Using REST API To Get Weather By Coordinates
+1621006752157: Calling jOpenCageGeocoder: Coordinates to Address
+1621006752344: Using REST API To Get Weather By Coordinates
+1621006752344: Calling jOpenCageGeocoder: Coordinates to Address
+1621006752511: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621006752730: Using REST API To Get Weather By Coordinates
+1621006752730: Calling jOpenCageGeocoder: Coordinates to Address
+1621006752918: Using REST API To Get Weather By Coordinates
+1621006752920: Using REST API To Get Weather By Address
+1621006752948: Using REST API To Get Weather By Coordinates
+1621006752949: Calling jOpenCageGeocoder: Coordinates to Address
+1621006753298: Called Weather API For Location Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal (40,6446,-8,649)
+1621006753466: Using REST API To Get Weather By Coordinates
+1621006753467: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621006753628: Using REST API To Get Weather By Coordinates
+1621006753628: Calling jOpenCageGeocoder: Coordinates to Address
+1621006753788: Using REST API To Get Statistics
+1621006753816: Using REST API To Get Weather By Coordinates
+1621006753816: Calling jOpenCageGeocoder: Coordinates to Address
+1621006753971: Using REST API To Get Weather By Coordinates
+1621006753974: Using REST API To Get Cached Weather Data
+1621006753993: Using REST API To Get Weather By Coordinates
+1621006753994: Calling jOpenCageGeocoder: Coordinates to Address
+1621006754187: Using REST API To Get Weather By Coordinates
+1621006754187: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621006759365: Using REST API To Get Weather By Coordinates
+1621006759365: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621006759593: Using REST API To Get Weather By Coordinates
+1621006759593: Calling jOpenCageGeocoder: Coordinates to Address
+1621006759756: Called Weather API For Location Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal (40,6446,-8,649)
+1621006759916: Using REST API To Get Weather By Coordinates
+1621006759916: Using REST API To Get Weather By Coordinates
+1621006759932: Using REST API To Get Weather By Address

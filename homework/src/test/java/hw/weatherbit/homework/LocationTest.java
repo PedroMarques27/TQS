@@ -1,6 +1,5 @@
 package hw.weatherbit.homework;
 
-import org.junit.Before;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -15,26 +14,20 @@ class LocationTest {
     @Test
     void getLat() {
         Assertions.assertThrows(NullPointerException.class,
-                ()->{
-                    noData.getLatitude();
-                }
+                ()-> noData.getLatitude()
         );
     }
     @Test
     void getLng() {
         Assertions.assertThrows(NullPointerException.class,
-                ()->{
-                    noData.getLongitude();
-                }
+                ()-> noData.getLongitude()
         );
     }
 
     @Test
     void getCity() {
         Assertions.assertThrows(NullPointerException.class,
-                ()->{
-                    noData.getCity();
-                }
+                ()-> noData.getCity()
         );
     }
 }
