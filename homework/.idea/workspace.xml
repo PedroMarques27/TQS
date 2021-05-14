@@ -6,14 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ae8180bc-7f0a-4084-acdd-f1f348b7b508" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/ApiCallsMethodsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/ApiCallsMethodsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/ApiRestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/ApiRestTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/LocationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/LocationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/WebControllerSeleniumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/WebControllerSeleniumTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/hw/weatherbit/homework/ApiCallsMethodsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/hw/weatherbit/homework/ApiCallsMethodsTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/hw/weatherbit/homework/ApiRestTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/hw/weatherbit/homework/ApiRestTest$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/hw/weatherbit/homework/ApiRestTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/hw/weatherbit/homework/ApiRestTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TQS- HW midterm assignment - report template.docx" beforeDir="false" afterPath="$PROJECT_DIR$/TQS- HW midterm assignment - report template.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/ApiRequestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/ApiRequestTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/~$S- HW midterm assignment - report template.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +231,7 @@
       <workItem from="1620930630410" duration="1944000" />
       <workItem from="1620934903478" duration="2380000" />
       <workItem from="1620984319320" duration="12633000" />
-      <workItem from="1621001731744" duration="5537000" />
+      <workItem from="1621001731744" duration="8230000" />
     </task>
     <servers />
   </component>

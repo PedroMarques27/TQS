@@ -10,7 +10,6 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ApiRequestTest {
-    MockMvc mockMvc;
     private ApiRequest apiRequest;
 
     @Test
