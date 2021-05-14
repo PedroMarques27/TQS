@@ -6,17 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ae8180bc-7f0a-4084-acdd-f1f348b7b508" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiCallsMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiCallsMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/ApiRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/weather.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/weather.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/ApiControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/ApiRestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/ApiRestTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/ApiCallsMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/ApiCallsMethods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/ApiRestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hw/weatherbit/homework/ApiRestController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/hw/weatherbit/homework/ApiRestTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/hw/weatherbit/homework/ApiRestTest$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/hw/weatherbit/homework/ApiRestTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/hw/weatherbit/homework/ApiRestTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +223,7 @@
       <workItem from="1620923146009" duration="3853000" />
       <workItem from="1620930630410" duration="1944000" />
       <workItem from="1620934903478" duration="2380000" />
-      <workItem from="1620984319320" duration="11811000" />
+      <workItem from="1620984319320" duration="12633000" />
     </task>
     <servers />
   </component>
