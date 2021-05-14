@@ -1,0 +1,69 @@
+
+‘
+java:S1319"tThe type of the "locations" object should be an interface such as "List" rather than the implementation "ArrayList".(¿¸‹Ç8×ı¡Û–/
+‡
+java:S1319"qThe type of the "cities" object should be an interface such as "List" rather than the implementation "ArrayList".(åà‚Ë
+ˆ
+java:S1319"mThe type of the "cache" object should be an interface such as "Map" rather than the implementation "HashMap".(‹¿§Äûÿÿÿÿ
+
+java:S1319 "uThe type of the "locationCache" object should be an interface such as "Map" rather than the implementation "HashMap".(ƒ£’ıÿÿÿÿ
+E
+java:S1444"/Make this "public static locations" field final(¿¸‹Ç
+B
+java:S1444",Make this "public static cities" field final(åà‚Ë
+F
+java:S1444"+Make this "public static cache" field final(‹¿§Äûÿÿÿÿ
+N
+java:S1444 "3Make this "public static locationCache" field final(ƒ£’ıÿÿÿÿ
+H
+java:S1444!"2Make this "public static geoApiCalled" field final(Îãİç
+Q
+java:S1444""6Make this "public static weatherApiCalled" field final(åî†ûÿÿÿÿ
+C
+java:S1444#"-Make this "public static apiHits" field final(÷¨õŸ
+J
+java:S1444$"/Make this "public static apiMisses" field final(çéØøÿÿÿÿ
+J
+java:S1444%"/Make this "public static usedCache" field final(©ßüşÿÿÿÿ
+C
+java:S1444&".Make this "public static geoCache" field final(¼Ñ¾^
+7
+java:S1643A"Use a StringBuilder instead.(§Úç‰øÿÿÿÿ
+k
+java:S1104"UMake locations a static final constant or non-public and provide accessors if needed.(¿¸‹Ç
+h
+java:S1104"RMake cities a static final constant or non-public and provide accessors if needed.(åà‚Ë
+l
+java:S1104"QMake cache a static final constant or non-public and provide accessors if needed.(‹¿§Äûÿÿÿÿ
+t
+java:S1104 "YMake locationCache a static final constant or non-public and provide accessors if needed.(ƒ£’ıÿÿÿÿ
+n
+java:S1104!"XMake geoApiCalled a static final constant or non-public and provide accessors if needed.(Îãİç
+w
+java:S1104""\Make weatherApiCalled a static final constant or non-public and provide accessors if needed.(åî†ûÿÿÿÿ
+i
+java:S1104#"SMake apiHits a static final constant or non-public and provide accessors if needed.(÷¨õŸ
+p
+java:S1104$"UMake apiMisses a static final constant or non-public and provide accessors if needed.(çéØøÿÿÿÿ
+p
+java:S1104%"UMake usedCache a static final constant or non-public and provide accessors if needed.(©ßüşÿÿÿÿ
+i
+java:S1104&"TMake geoCache a static final constant or non-public and provide accessors if needed.(¼Ñ¾^
+:
+java:S2386"Make this member "protected".(¿¸‹Ç8ßı¡Û–/
+3
+java:S2386"Make this member "protected".(åà‚Ë
+8
+java:S2386"Make this member "protected".(‹¿§Äûÿÿÿÿ
+8
+java:S2386 "Make this member "protected".(ƒ£’ıÿÿÿÿ
+Q
+java:S2696*"6Make the enclosing method "static" or remove this set.(Ñíğ¯üÿÿÿÿ
+Q
+java:S26968"6Make the enclosing method "static" or remove this set.(Ñ…‰üÿÿÿÿ
+Q
+java:S2696<"6Make the enclosing method "static" or remove this set.(‡Øıÿÿÿÿÿ
+L
+java:S2696Q"6Make the enclosing method "static" or remove this set.(÷Â¿Ú
+L
+java:S2696e"6Make the enclosing method "static" or remove this set.(÷Â¿Ú

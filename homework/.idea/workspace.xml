@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae8180bc-7f0a-4084-acdd-f1f348b7b508" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TQS- HW midterm assignment - report template.docx" beforeDir="false" afterPath="$PROJECT_DIR$/TQS- HW midterm assignment - report template.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/ApiRequestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/hw/weatherbit/homework/ApiRequestTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/~$S- HW midterm assignment - report template.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/WeatherData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hw/weatherbit/homework/WeatherData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/weather.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/weather.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,20 +92,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ApiRestTest.cacheNotValidUpdate">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.HomeworkApplication (1)">
     <configuration name="ApiRestTest.addedToCities" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="homework" />
       <extension name="coverage">
@@ -232,6 +220,7 @@
       <workItem from="1620934903478" duration="2380000" />
       <workItem from="1620984319320" duration="12633000" />
       <workItem from="1621001731744" duration="8230000" />
+      <workItem from="1621013395735" duration="1962000" />
     </task>
     <servers />
   </component>

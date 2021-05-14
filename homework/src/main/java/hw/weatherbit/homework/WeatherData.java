@@ -45,7 +45,7 @@ public class WeatherData{
 
 
         public String temperatureData() {
-            return String.format("Max: %.1f K,Min: %.1fK, Feels: %.1fK", temp_max,
+            return String.format("Max: %.1fºK,Min: %.1fºK, Feels: %.1fºK", temp_max,
                     temp_min, feels_like);
         }
         public String moreData() {
@@ -53,7 +53,7 @@ public class WeatherData{
         }
 
         public String temperature() {
-            return String.format("%.1fºC",temp);
+            return String.format("%.1fºK",temp);
         }
     }
 

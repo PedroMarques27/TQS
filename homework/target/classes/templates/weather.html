@@ -56,10 +56,11 @@
 </head>
 <body>
 <div>
+    <p></p>
     <div class="container">
         <form th:action="${'/'}"  th:method="POST">
-            <input type="text"   name="city" >Address</input>
-            <input type="submit">Register</input>
+            <input type="text"   name="city" ></input>
+            <input type="submit"></input>
         </form>
         <p id="WeatherApiCalls">Weather API Called <a th:text="${WeatherApiCalls}"></a> times</p>
         <p id="GeolocationApiCalls">Geolocator API Called <a th:text="${GeolocationApiCalls}"></a> times</p>

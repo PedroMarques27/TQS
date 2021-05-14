@@ -1579,3 +1579,132 @@
 1621006759916: Using REST API To Get Weather By Coordinates
 1621006759916: Using REST API To Get Weather By Coordinates
 1621006759932: Using REST API To Get Weather By Address
+1621013623144: Using REST API To Get Weather By Address
+1621013623162: Called jOpenCageGeocoder: Address to Coordinates
+1621013624480: Called Weather API For Location Porto (-23,5328,-47,76)
+1621013731130: Loading Web Page
+1621013758836: Loading Web Page
+1621013777062: Loading Web Page
+1621013780620: Getting Location Info For Location: Aveiro
+1621013780620: Called jOpenCageGeocoder: Address to Coordinates
+1621013781512: Called Weather API For Location Aveiro (40,6414,-8,599)
+1621013781766: Weather API Called on Web Controller
+1621013781767: Loading Web Page With data For Location Aveiro
+1621013840960: Loading Web Page
+1621013906320: Using REST API To Get Weather By Coordinates
+1621013906321: Calling jOpenCageGeocoder: Coordinates to Address
+1621013906884: Called Weather API For Location Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal (40,6446,-8,649)
+1621013927321: Using REST API To Get Weather By Coordinates
+1621013927322: Calling jOpenCageGeocoder: Coordinates to Address
+1621013927493: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621013946261: Using REST API To Get Statistics
+1621013960647: Using REST API To Get Weather By Coordinates
+1621013966665: Using REST API To Get Statistics
+1621013978815: Using REST API To Get Cached Weather Data
+1621014000487: Using REST API To Get Weather By Address
+1621014000487: Called jOpenCageGeocoder: Address to Coordinates
+1621014001175: Called Weather API For Location Lisboa (5,0091,-74,44)
+1621014008669: Using REST API To Get Weather By Address
+1621014008670: Called jOpenCageGeocoder: Address to Coordinates
+1621014009130: Called Weather API For Location Braga (41,5488,-8,434)
+1621014017467: Using REST API To Get Cached Weather Data
+1621014044313: Using REST API To Get Statistics
+1621014060729: Using REST API To Get Weather By Coordinates
+1621014060730: Called Weather API For Location Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal (40,6446,-8,649)
+1621014064410: Using REST API To Get Statistics
+1621014132599: Using REST API To Get Statistics
+1621014149765: Using REST API To Get Weather By Coordinates
+1621014149765: Calling jOpenCageGeocoder: Coordinates to Address
+1621014150243: Called Weather API For Location Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal (40,6446,-8,649)
+1621014164464: Using REST API To Get Weather By Coordinates
+1621014164464: Calling jOpenCageGeocoder: Coordinates to Address
+1621014164610: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621014172463: Using REST API To Get Statistics
+1621014193736: Using REST API To Get Weather By Coordinates
+1621014200209: Using REST API To Get Statistics
+1621014213710: Using REST API To Get Weather By Address
+1621014213710: Called jOpenCageGeocoder: Address to Coordinates
+1621014214495: Called Weather API For Location Lisboa (5,0091,-74,44)
+1621014220177: Using REST API To Get Weather By Address
+1621014220178: Called jOpenCageGeocoder: Address to Coordinates
+1621014220878: Called Weather API For Location Braga (41,5488,-8,434)
+1621014226034: Using REST API To Get Statistics
+1621014234817: Using REST API To Get Weather By Address
+1621014237090: Using REST API To Get Weather By Address
+1621014238852: Using REST API To Get Statistics
+1621014248409: Using REST API To Get Cached Weather Data
+1621014286970: Loading Web Page
+1621014312322: Getting Location Info For Location: Aveiro
+1621014312323: Called jOpenCageGeocoder: Address to Coordinates
+1621014312862: Called Weather API For Location Aveiro (40,6414,-8,599)
+1621014313071: Weather API Called on Web Controller
+1621014313072: Loading Web Page With data For Location Aveiro
+1621014363144: Getting Location Info For Location: Porto
+1621014363145: Called jOpenCageGeocoder: Address to Coordinates
+1621014363748: Called Weather API For Location Porto (-23,5328,-47,76)
+1621014363987: Weather API Called on Web Controller
+1621014363987: Loading Web Page With data For Location Porto
+1621014373497: Getting Location Info For Location: Aveiro
+1621014373498: Using Cached Data on Web Page For Location Aveiro
+1621014373498: Loading Web Page With data For Location Aveiro
+1621014381720: Loading Cache Web Page
+1621014406675: Using REST API To Get Statistics
+1621014413137: Using REST API To Get Cached Weather Data
+1621014429314: Using REST API To Get Weather By Address
+1621014429315: Called Weather API For Location Lisboa (5,0091,-74,44)
+1621014435624: Using REST API To Get Statistics
+1621014466503: Using REST API To Get Cached Weather Data
+1621014496781: Loading Cache Web Page
+1621014684475: Using REST API To Get Statistics
+1621014715765: Using REST API To Get Statistics
+1621014728501: Using REST API To Get Weather By Coordinates
+1621014728502: Calling jOpenCageGeocoder: Coordinates to Address
+1621014729490: Called Weather API For Location Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal (40,6446,-8,649)
+1621014746712: Using REST API To Get Weather By Coordinates
+1621014746712: Calling jOpenCageGeocoder: Coordinates to Address
+1621014746871: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621014756890: Using REST API To Get Statistics
+1621014773312: Using REST API To Get Weather By Coordinates
+1621014775849: Using REST API To Get Statistics
+1621014802681: Using REST API To Get Weather By Address
+1621014805093: Called jOpenCageGeocoder: Address to Coordinates
+1621014815732: Called Weather API For Location Lisboa (5,0091,-74,44)
+1621015045631: Loading Web Page
+1621015083199: Using REST API To Get Statistics
+1621015107398: Using REST API To Get Weather By Coordinates
+1621015107398: Calling jOpenCageGeocoder: Coordinates to Address
+1621015108295: Called Weather API For Location Churrasqueira Don Torradinho, Rua do Gravito, 3800-196 Aveiro, Portugal (40,6446,-8,649)
+1621015123274: Using REST API To Get Weather By Coordinates
+1621015123275: Calling jOpenCageGeocoder: Coordinates to Address
+1621015123543: Called Weather API For Location 15948 Petón do Currumil, Espanha (42,6446,-8,949)
+1621015133195: Using REST API To Get Statistics
+1621015147674: Using REST API To Get Weather By Coordinates
+1621015150899: Using REST API To Get Statistics
+1621015162219: Using REST API To Get Weather By Address
+1621015162220: Called jOpenCageGeocoder: Address to Coordinates
+1621015163359: Called Weather API For Location Lisboa (5,0091,-74,44)
+1621015175769: Using REST API To Get Weather By Address
+1621015175770: Called jOpenCageGeocoder: Address to Coordinates
+1621015176251: Called Weather API For Location Braga (41,5488,-8,434)
+1621015181722: Using REST API To Get Statistics
+1621015187194: Using REST API To Get Weather By Address
+1621015190427: Using REST API To Get Statistics
+1621015197737: Using REST API To Get Cached Weather Data
+1621015261006: Getting Location Info For Location: Aveiro
+1621015261007: Called jOpenCageGeocoder: Address to Coordinates
+1621015261461: Called Weather API For Location Aveiro (40,6414,-8,599)
+1621015261777: Weather API Called on Web Controller
+1621015261778: Loading Web Page With data For Location Aveiro
+1621015281976: Getting Location Info For Location: Porto
+1621015281977: Called jOpenCageGeocoder: Address to Coordinates
+1621015282419: Called Weather API For Location Porto (-23,5328,-47,76)
+1621015282681: Weather API Called on Web Controller
+1621015282681: Loading Web Page With data For Location Porto
+1621015296577: Getting Location Info For Location: Aveiro
+1621015296581: Using Cached Data on Web Page For Location Aveiro
+1621015296581: Loading Web Page With data For Location Aveiro
+1621015305829: Loading Cache Web Page
+1621015340454: Using REST API To Get Statistics
+1621015360494: Using REST API To Get Weather By Address
+1621015360495: Called Weather API For Location Lisboa (5,0091,-74,44)
+1621015364806: Using REST API To Get Statistics
